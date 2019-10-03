@@ -4,9 +4,9 @@ import AppPackage.AnimationClass;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-public class Janlea extends javax.swing.JFrame {
+public class JanelaPrinci extends javax.swing.JFrame {
 
-    public Janlea() {
+    public JanelaPrinci() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -148,10 +148,22 @@ public class Janlea extends javax.swing.JFrame {
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Idea_96px.png"))); // NOI18N
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel7MouseMoved(evt);
+            }
+        });
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+        });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 180, 150));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Today_96px.png"))); // NOI18N
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel8MouseMoved(evt);
@@ -166,6 +178,7 @@ public class Janlea extends javax.swing.JFrame {
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Clock_96px.png"))); // NOI18N
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel9MouseMoved(evt);
@@ -180,14 +193,47 @@ public class Janlea extends javax.swing.JFrame {
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Maintenance_96px.png"))); // NOI18N
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel10MouseMoved(evt);
+            }
+        });
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel10MouseExited(evt);
+            }
+        });
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, 180, 150));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Google_Drive_96px.png"))); // NOI18N
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel11MouseMoved(evt);
+            }
+        });
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel11MouseExited(evt);
+            }
+        });
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 180, 150));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Handshake_96px.png"))); // NOI18N
+        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel12MouseMoved(evt);
+            }
+        });
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel12MouseExited(evt);
+            }
+        });
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 180, 150));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 75, 760, 480));
@@ -252,7 +298,7 @@ public class Janlea extends javax.swing.JFrame {
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // TODO add your handling code here:
-        this.setState(Janlea.ICONIFIED);
+        this.setState(JanelaPrinci.ICONIFIED);
     }//GEN-LAST:event_jLabel20MouseClicked
 
     //aimando ao mover mouse em painel central
@@ -272,29 +318,43 @@ public class Janlea extends javax.swing.JFrame {
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel9MouseExited
 
-    private void jLabel10MouseMoved(java.awt.event.MouseEvent evt) {
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }
+    private void jLabel10MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseMoved
+          jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel10MouseMoved
 
-    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }
+    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseExited
+         jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel10MouseExited
 
-    private void jLabel11MouseMoved(java.awt.event.MouseEvent evt) {
+    private void jLabel11MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseMoved
+        // TODO add your handling code here:
         jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }
+    }//GEN-LAST:event_jLabel11MouseMoved
 
-    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {
+    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
+        // TODO add your handling code here:
         jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }
+    }//GEN-LAST:event_jLabel11MouseExited
 
-    private void jLabel2MouseMoved(java.awt.event.MouseEvent evt) {
+    private void jLabel12MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseMoved
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }
+    }//GEN-LAST:event_jLabel12MouseMoved
 
-    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }
+    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
+         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel12MouseExited
+
+    private void jLabel7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseMoved
+        // TODO add your handling code here:
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+        
+    }//GEN-LAST:event_jLabel7MouseMoved
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        // TODO add your handling code here:
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel7MouseExited
+
 
     public static void main(String args[]) {
         try {
@@ -305,10 +365,10 @@ public class Janlea extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Janlea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JanelaPrinci.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         java.awt.EventQueue.invokeLater(() -> {
-            new Janlea().setVisible(true);
+            new JanelaPrinci().setVisible(true);
         });
     }
 
