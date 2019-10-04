@@ -22,6 +22,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -69,13 +75,33 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel22Deslogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sair.png"))); // NOI18N
         jPanel1Lateral.add(jLabel22Deslogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 27, -1, -1));
 
+        jScrollPane1.setBorder(null);
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 550, -1, -1));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 60, -1, -1));
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 180, -1, -1));
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 270, -1, -1));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 360, -1, -1));
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pizzariaICON.png"))); // NOI18N
+        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 460, -1, -1));
+
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, 940));
 
         jScrollPane1.setViewportView(jPanel3);
@@ -344,6 +370,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel21User;
     private javax.swing.JLabel jLabel22Deslogar;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
