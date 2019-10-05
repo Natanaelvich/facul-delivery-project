@@ -52,7 +52,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 0, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2Login.setBackground(new java.awt.Color(255, 51, 255));
+        jPanel2Login.setBackground(new java.awt.Color(216, 216, 216));
         jPanel2Login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -71,13 +71,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2Login.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 355, 190, 30));
 
-        jTextField1User.setBackground(new java.awt.Color(255, 102, 255));
+        jTextField1User.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1User.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1User.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1User.setBorder(null);
         jPanel2Login.add(jTextField1User, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 190, 40));
 
-        jTextField2Senha.setBackground(new java.awt.Color(255, 102, 255));
+        jTextField2Senha.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2Senha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField2Senha.setForeground(new java.awt.Color(102, 102, 102));
         jTextField2Senha.setBorder(null);
@@ -130,7 +130,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
 
         jPanelSlider1.setBorder(null);
 
-        jPanel2Logo.setBackground(new java.awt.Color(204, 0, 204));
+        jPanel2Logo.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2Logo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/fatia-de-pizza.png"))); // NOI18N
@@ -138,51 +138,49 @@ public class TelaDeLogin extends javax.swing.JFrame {
 
         jPanelSlider1.add(jPanel2Logo, "card3");
 
-        jPanel3Cadastro.setBackground(new java.awt.Color(255, 0, 204));
+        jPanel3Cadastro.setBackground(new java.awt.Color(230, 230, 230));
         jPanel3Cadastro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText("Nome");
         jPanel3Cadastro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel5.setForeground(new java.awt.Color(255, 51, 51));
         jLabel5.setText("Email");
         jPanel3Cadastro.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
         jLabel6.setText("Telefone");
         jPanel3Cadastro.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel7.setForeground(new java.awt.Color(255, 51, 51));
         jLabel7.setText("Senha");
         jPanel3Cadastro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("Confirmar Senha");
         jPanel3Cadastro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        jFormattedTextField1.setBackground(new java.awt.Color(255, 102, 255));
+        jFormattedTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jFormattedTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jFormattedTextField1.setText("   (99)9 9999-9999");
         jPanel3Cadastro.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 102, 255));
+        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPasswordField1.setText("jPasswordField1");
         jPanel3Cadastro.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 190, 30));
 
-        jPasswordField2.setBackground(new java.awt.Color(255, 102, 255));
+        jPasswordField2.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField2.setForeground(new java.awt.Color(0, 0, 0));
-        jPasswordField2.setText("jPasswordField2");
         jPanel3Cadastro.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 190, 30));
 
         jButton2.setBackground(new java.awt.Color(102, 0, 102));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Cadastrar");
         jButton2.setBorder(null);
         jButton2.setOpaque(false);
@@ -192,13 +190,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3Cadastro.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 190, -1));
 
-        jTextField1User1.setBackground(new java.awt.Color(255, 102, 255));
+        jTextField1User1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1User1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1User1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1User1.setBorder(null);
         jPanel3Cadastro.add(jTextField1User1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, 40));
 
-        jTextField1User2.setBackground(new java.awt.Color(255, 102, 255));
+        jTextField1User2.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1User2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1User2.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1User2.setBorder(null);
