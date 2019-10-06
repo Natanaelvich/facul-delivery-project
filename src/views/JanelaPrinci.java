@@ -27,6 +27,8 @@ public class JanelaPrinci extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelSlider2 = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        jPanel2 = new javax.swing.JPanel();
         jPanel1Lateral = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel21User = new javax.swing.JLabel();
@@ -73,17 +75,11 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
@@ -95,6 +91,16 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -103,9 +109,14 @@ public class JanelaPrinci extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanelSlider2.add(jPanel2, "card2");
+
+        getContentPane().add(jPanelSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 1299));
+
         jPanel1Lateral.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1Lateral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        jPanel1Lateral.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1Lateral.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1Lateral.setPreferredSize(new java.awt.Dimension(290, 555));
         jPanel1Lateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -276,7 +287,8 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jScrollPane2.setBorder(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(760, 1110));
+        jPanel1.setMinimumSize(new java.awt.Dimension(730, 1299));
+        jPanel1.setPreferredSize(new java.awt.Dimension(760, 1299));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -375,7 +387,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 180, 150));
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/coxinha.png"))); // NOI18N
         jLabel24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel24.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -389,11 +401,8 @@ public class JanelaPrinci extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 700, 180, 150));
 
-        jLabel25.setText("#########");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 860, -1, -1));
-
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pastel.png"))); // NOI18N
         jLabel26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel26.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -405,13 +414,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
                 jLabel26MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 700, 180, 150));
-
-        jLabel31.setText("#########");
-        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 860, -1, -1));
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 710, 180, 150));
 
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/coxinhaDecopo.png"))); // NOI18N
         jLabel32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel32.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -423,13 +429,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
                 jLabel32MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 700, 180, 150));
-
-        jLabel33.setText("#########");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 860, -1, -1));
+        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 700, 200, 160));
 
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agua.png"))); // NOI18N
         jLabel34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel34.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -441,13 +444,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
                 jLabel34MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 910, 180, 150));
-
-        jLabel35.setText("#########");
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 1070, -1, -1));
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 1100, 180, 150));
 
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/suco-de-laranja.png"))); // NOI18N
         jLabel36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel36.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -459,13 +459,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
                 jLabel36MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 910, 180, 150));
-
-        jLabel37.setText("#########");
-        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 1070, -1, -1));
+        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1100, 180, 150));
 
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/coca.png"))); // NOI18N
         jLabel38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel38.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -477,15 +474,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
                 jLabel38MouseExited(evt);
             }
         });
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 910, 180, 150));
-
-        jLabel39.setText("#########");
-        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1070, -1, -1));
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 1100, 180, 150));
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 102, 51));
-        jLabel40.setText("Salgados");
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, -1, -1));
+        jLabel40.setText("Bebidas");
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 950, -1, -1));
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 102, 51));
@@ -493,7 +487,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, -1));
 
         jSeparator7.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1100, 510, 10));
+        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 1050, 510, 10));
 
         jSeparator8.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 510, 10));
@@ -521,17 +515,63 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("Frango com catupiry");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
+        jLabel17.setText("Coxinha de copo");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 870, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText(" Napolitana");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, -1, -1));
 
+        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel43.setText("Frango com catupiry");
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel25.setText("Coxinha de Frango");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 860, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel31.setText("Água");
+        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 1270, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 102, 51));
+        jLabel44.setText("Salgados");
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, -1, -1));
+
+        jSeparator11.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 910, 510, 10));
+
+        jSeparator12.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 910, 510, 10));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel33.setText("Pastel");
+        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 860, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel45.setText("Refri");
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 1270, -1, -1));
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel46.setText("Suco");
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 1270, -1, -1));
+
+        jLabel47.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel47.setText("Suco");
+        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 1270, -1, -1));
+
         jScrollPane2.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 760, 480));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -560,60 +600,6 @@ public class JanelaPrinci extends javax.swing.JFrame {
         this.setState(JanelaPrinci.ICONIFIED);
     }//GEN-LAST:event_jLabel20MouseClicked
 
-    //aimando ao mover mouse em painel central
-    private void jLabel8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseMoved
-        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }//GEN-LAST:event_jLabel8MouseMoved
-
-    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
-        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel8MouseExited
-
-    private void jLabel9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseMoved
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }//GEN-LAST:event_jLabel9MouseMoved
-
-    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel9MouseExited
-
-    private void jLabel10MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseMoved
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }//GEN-LAST:event_jLabel10MouseMoved
-
-    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseExited
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel10MouseExited
-
-    private void jLabel11MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseMoved
-        // TODO add your handling code here:
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }//GEN-LAST:event_jLabel11MouseMoved
-
-    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
-        // TODO add your handling code here:
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel11MouseExited
-
-    private void jLabel12MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseMoved
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-    }//GEN-LAST:event_jLabel12MouseMoved
-
-    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel12MouseExited
-
-    private void jLabel7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseMoved
-        // TODO add your handling code here:
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
-
-    }//GEN-LAST:event_jLabel7MouseMoved
-
-    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
-        // TODO add your handling code here:
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
-    }//GEN-LAST:event_jLabel7MouseExited
-
     private void jLabel26PitStopMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26PitStopMouseMoved
         jLabel25_1.setVisible(true);
     }//GEN-LAST:event_jLabel26PitStopMouseMoved
@@ -630,54 +616,107 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel31_2.setVisible(false);
     }//GEN-LAST:event_jLabel27MouseExited
 
-    private void jLabel24MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseMoved
+    private void jLabel38MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel24MouseMoved
-
-    private void jLabel24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel24MouseExited
-
-    private void jLabel26MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel26MouseMoved
-
-    private void jLabel26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel26MouseExited
-
-    private void jLabel32MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel32MouseMoved
-
-    private void jLabel32MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel32MouseExited
-
-    private void jLabel34MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel34MouseMoved
-
-    private void jLabel34MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel34MouseExited
-
-    private void jLabel36MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel36MouseMoved
-
-    private void jLabel36MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel36MouseExited
+    }//GEN-LAST:event_jLabel38MouseExited
 
     private void jLabel38MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel38MouseMoved
 
-    private void jLabel38MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseExited
+    private void jLabel36MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel38MouseExited
-    
+    }//GEN-LAST:event_jLabel36MouseExited
+
+    private void jLabel36MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel36MouseMoved
+
+    private void jLabel34MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel34MouseExited
+
+    private void jLabel34MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel34MouseMoved
+
+    private void jLabel32MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel32MouseExited
+
+    private void jLabel32MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel32MouseMoved
+
+    private void jLabel26MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel26MouseExited
+
+    private void jLabel26MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel26MouseMoved
+
+    private void jLabel24MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel24MouseExited
+
+    private void jLabel24MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel24MouseMoved
+
+    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
+        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel12MouseExited
+
+    private void jLabel12MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseMoved
+        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel12MouseMoved
+
+    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
+        // TODO add your handling code here:
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel11MouseExited
+
+    private void jLabel11MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseMoved
+        // TODO add your handling code here:
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel11MouseMoved
+
+    private void jLabel10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseExited
+        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel10MouseExited
+
+    private void jLabel10MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseMoved
+        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel10MouseMoved
+
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel9MouseExited
+
+    private void jLabel9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseMoved
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel9MouseMoved
+
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel8MouseExited
+
+//GEN-FIRST:event_jLabel8MouseMoved
+ 
+//GEN-LAST:event_jLabel8MouseMoved
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        // TODO add your handling code here:
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
+    }//GEN-LAST:event_jLabel7MouseExited
+
+    private void jLabel7MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseMoved
+        // TODO add your handling code here:
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
+    }//GEN-LAST:event_jLabel7MouseMoved
+
+   
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -730,16 +769,18 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33_4;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel34_5;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel35_6;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -747,13 +788,17 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel1Lateral;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
