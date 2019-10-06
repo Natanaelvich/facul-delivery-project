@@ -47,7 +47,7 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jLabel8PizzaMexicana = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
+        jLabel48NomeMexicana = new javax.swing.JLabel();
 
         jScrollPane2ProdutosPitsop.setBorder(null);
 
@@ -326,16 +326,19 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel8PizzaMexicana.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8PizzaMexicanaMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel8PizzaMexicanaMouseExited(evt);
             }
         });
         jPanel1.add(jLabel8PizzaMexicana, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 180, 150));
 
-        jLabel48.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel48.setText("Pizza Mexicana");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        jLabel48NomeMexicana.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel48NomeMexicana.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel48NomeMexicana.setText("Pizza Mexicana");
+        jPanel1.add(jLabel48NomeMexicana, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
         jScrollPane2ProdutosPitsop.setViewportView(jPanel1);
 
@@ -479,6 +482,18 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel8PizzaMexicana.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseExited
 
+    private void jLabel8PizzaMexicanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseClicked
+        // TODO add your handling code here:
+        JanelaPrinci janelaPrinci = new JanelaPrinci();
+        CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
+        caixaDeCompra.jLabel2IconProduto.setIcon(jLabel8PizzaMexicana.getIcon());
+        caixaDeCompra.jLabel3NomeProduto.setText(jLabel48NomeMexicana.getText());
+        caixaDeCompra.jLabel2Preço.setText("24.99 R$");
+        caixaDeCompra.jLabel2Igredientes.setText("pao,pao,pao,pao,pao,pao,pao,");
+        
+        caixaDeCompra.setVisible(true);
+    }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel10Muça;
@@ -505,7 +520,7 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel48NomeMexicana;
     private javax.swing.JLabel jLabel7RomeuEjuli;
     private javax.swing.JLabel jLabel8PizzaMexicana;
     private javax.swing.JLabel jLabel9Portuguesa;
