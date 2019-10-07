@@ -331,16 +331,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel27PontesMouseClicked
 
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
-        Produtos produtosClass = new Produtos();
-        jPanelSlider2.add(produtosClass);
-        jPanelSlider2.nextPanel(10, produtosClass, rootPaneCheckingEnabled);
+
 
     }//GEN-LAST:event_jLabel28MouseClicked
 
     private void jLabel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel29MouseClicked
-        ProdutosXtudo produtosClass = new ProdutosXtudo();
-        jPanelSlider2.add(produtosClass);
-        jPanelSlider2.nextPanel(10, produtosClass, rootPaneCheckingEnabled);
+
     }//GEN-LAST:event_jLabel29MouseClicked
 
     public static void main(String args[]) {
