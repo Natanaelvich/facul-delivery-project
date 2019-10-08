@@ -5,15 +5,12 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public CaixaDeCompra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        this.jScrollPane2CaixaCompra.getVerticalScrollBar().setUnitIncrement(20);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2CaixaCompra = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1FecharCaixaCompra = new javax.swing.JLabel();
         jLabel2IconProduto = new javax.swing.JLabel();
@@ -22,17 +19,19 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2Preço = new javax.swing.JLabel();
         jLabel2Igredientes = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jScrollPane2CaixaCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 5, true));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1FecharCaixaCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Multiply_32px.png"))); // NOI18N
@@ -42,7 +41,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
                 jLabel1FecharCaixaCompraMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1FecharCaixaCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, -1, -1));
+        jPanel1.add(jLabel1FecharCaixaCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, -1));
 
         jLabel2IconProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/comida-rapida.png"))); // NOI18N
         jPanel1.add(jLabel2IconProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
@@ -55,12 +54,12 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Preço  : ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         jLabel2Preço.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2Preço.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2Preço.setForeground(new java.awt.Color(0, 204, 0));
         jLabel2Preço.setText(".....");
-        jPanel1.add(jLabel2Preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
+        jPanel1.add(jLabel2Preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
 
         jLabel2Igredientes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2Igredientes.setForeground(new java.awt.Color(102, 102, 102));
@@ -76,11 +75,28 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel3.setText("Ingredientes : ");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, -1));
 
-        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, -5, 490, 500));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ok.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 325, -1, -1));
 
-        jScrollPane2CaixaCompra.setViewportView(jPanel3);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("Confirmar Pedido");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
 
-        getContentPane().add(jScrollPane2CaixaCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 410));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("Adicionar ao carrinho");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/adicionar-ao-carrinho.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 325, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/money.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 225, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 412));
 
         pack();
         setLocationRelativeTo(null);
@@ -117,13 +133,16 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1FecharCaixaCompra;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel2IconProduto;
     public javax.swing.JLabel jLabel2Igredientes;
     public javax.swing.JLabel jLabel2Preço;
     private javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabel3NomeProduto;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane2CaixaCompra;
     // End of variables declaration//GEN-END:variables
 }

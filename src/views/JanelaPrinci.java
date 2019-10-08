@@ -27,7 +27,9 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jPanelSlider2 = new diu.swe.habib.JPanelSlider.JPanelSlider();
         jPanel2 = new javax.swing.JPanel();
+        jSeparator8 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
+        jLabel7Iconlogo = new javax.swing.JLabel();
         jPanel1Lateral = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel21User = new javax.swing.JLabel();
@@ -68,7 +70,9 @@ public class JanelaPrinci extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMinimumSize(new java.awt.Dimension(1050, 687));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1050, 687));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -77,15 +81,24 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/tenda.png"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, 440));
+        jSeparator8.setBackground(new java.awt.Color(255, 51, 51));
+        jSeparator8.setForeground(new java.awt.Color(255, 51, 51));
+        jSeparator8.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 620, 20));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 130)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel8.setText("AiFurbe");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 440, 150));
+
+        jLabel7Iconlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/IconLogo.png"))); // NOI18N
+        jPanel2.add(jLabel7Iconlogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 160, 140));
 
         jPanelSlider2.add(jPanel2, "card2");
 
-        getContentPane().add(jPanelSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 79, 760, 475));
+        getContentPane().add(jPanelSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 79, 760, 610));
 
         jPanel1Lateral.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1Lateral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jPanel1Lateral.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1Lateral.setPreferredSize(new java.awt.Dimension(290, 555));
         jPanel1Lateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -232,9 +245,9 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel3);
 
-        jPanel1Lateral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 290, 490));
+        jPanel1Lateral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 290, 620));
 
-        getContentPane().add(jPanel1Lateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, -1));
+        getContentPane().add(jPanel1Lateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 690));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -259,12 +272,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jLabel7NomeEmpresa.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel7NomeEmpresa.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7NomeEmpresa.setText("hahaha");
+        jLabel7NomeEmpresa.setText("Inicio");
         jPanel4.add(jLabel7NomeEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, -1, -1));
 
         jSeparator7.setBackground(new java.awt.Color(102, 102, 102));
         jSeparator7.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 330, 10));
+        jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 300, 10));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 760, 80));
 
@@ -379,6 +392,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7Iconlogo;
     private javax.swing.JLabel jLabel7NomeEmpresa;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1Lateral;
@@ -395,5 +409,6 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     // End of variables declaration//GEN-END:variables
 }

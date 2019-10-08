@@ -32,7 +32,7 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
-        jLabel15 = new javax.swing.JLabel();
+        jLabel15nomePortuguesa = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -49,11 +49,14 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel8PizzaMexicana = new javax.swing.JLabel();
         jLabel48NomeMexicana = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(760, 690));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jScrollPane2ProdutosPitsop.setBorder(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMinimumSize(new java.awt.Dimension(730, 1299));
-        jPanel1.setPreferredSize(new java.awt.Dimension(760, 1299));
+        jPanel1.setMinimumSize(new java.awt.Dimension(730, 1310));
+        jPanel1.setPreferredSize(new java.awt.Dimension(760, 1310));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -85,6 +88,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel9Portuguesa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9PortuguesaMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel9PortuguesaMouseExited(evt);
             }
@@ -248,10 +254,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jSeparator10.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 690, 510, 10));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("Portuguesa");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
+        jLabel15nomePortuguesa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15nomePortuguesa.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel15nomePortuguesa.setText("Portuguesa");
+        jPanel1.add(jLabel15nomePortuguesa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
@@ -342,26 +348,7 @@ public class ProdutosPitstop extends javax.swing.JPanel {
 
         jScrollPane2ProdutosPitsop.setViewportView(jPanel1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2ProdutosPitsop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2ProdutosPitsop, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jScrollPane2ProdutosPitsop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, -1, 610));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel7RomeuEjuliMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseMoved
@@ -494,13 +481,25 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         caixaDeCompra.setVisible(true);
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
 
+    private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
+        // TODO add your handling code here:
+        JanelaPrinci janelaPrinci = new JanelaPrinci();
+        CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
+        caixaDeCompra.jLabel2IconProduto.setIcon(jLabel9Portuguesa.getIcon());
+        caixaDeCompra.jLabel3NomeProduto.setText(jLabel15nomePortuguesa.getText());
+        caixaDeCompra.jLabel2Preço.setText("39.99 R$");
+        caixaDeCompra.jLabel2Igredientes.setText("kkkkkkkkkkkkkkkkkk");
+        
+        caixaDeCompra.setVisible(true);
+    }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel10Muça;
     private javax.swing.JLabel jLabel11FrangoCap;
     private javax.swing.JLabel jLabel12Napoli;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel15nomePortuguesa;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
