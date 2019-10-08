@@ -18,7 +18,6 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jLabel2Preço = new javax.swing.JLabel();
         jLabel2Igredientes = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -61,19 +60,15 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2Preço.setText(".....");
         jPanel1.add(jLabel2Preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
 
-        jLabel2Igredientes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2Igredientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2Igredientes.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2Igredientes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2Igredientes.setText(".....");
         jLabel2Igredientes.setToolTipText("");
         jLabel2Igredientes.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel2Igredientes.setAutoscrolls(true);
-        jPanel1.add(jLabel2Igredientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 180, 130));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("Ingredientes : ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, -1, -1));
+        jLabel2Igredientes.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true), "Igredientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(102, 102, 102))); // NOI18N
+        jPanel1.add(jLabel2Igredientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 220, 160));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ok.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 325, -1, -1));
@@ -137,7 +132,6 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public javax.swing.JLabel jLabel2IconProduto;
     public javax.swing.JLabel jLabel2Igredientes;
     public javax.swing.JLabel jLabel2Preço;
-    private javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabel3NomeProduto;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

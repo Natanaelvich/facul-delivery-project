@@ -26,7 +26,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelSlider2 = new diu.swe.habib.JPanelSlider.JPanelSlider();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel2inicioLogo = new javax.swing.JPanel();
         jSeparator8 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         jLabel7Iconlogo = new javax.swing.JLabel();
@@ -34,6 +34,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel21User = new javax.swing.JLabel();
         jLabel22Deslogar = new javax.swing.JLabel();
+        jLabel7inicio = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -78,23 +79,23 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jPanelSlider2.setBorder(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2inicioLogo.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2inicioLogo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSeparator8.setBackground(new java.awt.Color(255, 51, 51));
         jSeparator8.setForeground(new java.awt.Color(255, 51, 51));
         jSeparator8.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 620, 20));
+        jPanel2inicioLogo.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 620, 20));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 130)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("AiFurbe");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 440, 150));
+        jPanel2inicioLogo.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 440, 150));
 
         jLabel7Iconlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/IconLogo.png"))); // NOI18N
-        jPanel2.add(jLabel7Iconlogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 160, 140));
+        jPanel2inicioLogo.add(jLabel7Iconlogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 160, 140));
 
-        jPanelSlider2.add(jPanel2, "card2");
+        jPanelSlider2.add(jPanel2inicioLogo, "card2");
 
         getContentPane().add(jPanelSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 79, 760, 610));
 
@@ -117,6 +118,15 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jLabel22Deslogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sair.png"))); // NOI18N
         jPanel1Lateral.add(jLabel22Deslogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 27, -1, -1));
+
+        jLabel7inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/botao-inicio.png"))); // NOI18N
+        jLabel7inicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7inicioMouseClicked(evt);
+            }
+        });
+        jPanel1Lateral.add(jLabel7inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 23, -1, -1));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -293,6 +303,9 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         animatioOPT.jLabelXLeft(350, 110, 5, 5, jLabel22Deslogar);
         animatioOPT.jLabelXRight(110, 350, 5, 5, jLabel22Deslogar);
+        
+        animatioOPT.jLabelXLeft(400, 150, 5, 5, jLabel7inicio);
+        animatioOPT.jLabelXRight(150, 400, 5, 5, jLabel7inicio);
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel21FecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21FecharMouseClicked
@@ -352,6 +365,11 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel29MouseClicked
 
+    private void jLabel7inicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7inicioMouseClicked
+        jPanelSlider2.nextPanel(10, jPanel2inicioLogo, rootPaneCheckingEnabled);
+        jLabel7NomeEmpresa.setText("Inicio");
+    }//GEN-LAST:event_jLabel7inicioMouseClicked
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -394,9 +412,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7Iconlogo;
     private javax.swing.JLabel jLabel7NomeEmpresa;
+    private javax.swing.JLabel jLabel7inicio;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1Lateral;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel2inicioLogo;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

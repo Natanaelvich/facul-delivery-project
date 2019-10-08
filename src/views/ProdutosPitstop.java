@@ -1,6 +1,7 @@
 package views;
 
 import java.awt.Color;
+import javax.swing.JLabel;
 
 public class ProdutosPitstop extends javax.swing.JPanel {
 
@@ -8,13 +9,14 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         initComponents();
         this.jScrollPane2ProdutosPitsop.getVerticalScrollBar().setUnitIncrement(20);
     }
+    JanelaPrinci janelaPrinci = new JanelaPrinci();
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane2ProdutosPitsop = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        jLabel13RJNome = new javax.swing.JLabel();
         jLabel7RomeuEjuli = new javax.swing.JLabel();
         jLabel9Portuguesa = new javax.swing.JLabel();
         jLabel10Muça = new javax.swing.JLabel();
@@ -33,10 +35,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
         jLabel15nomePortuguesa = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel16NomeMuça = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
+        jLabel18NapoliNome = new javax.swing.JLabel();
+        jLabel43FranCatuNome = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -59,10 +61,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(760, 1310));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("Romeu e Julieta");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 480, -1, -1));
+        jLabel13RJNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13RJNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel13RJNome.setText("Romeu e Julieta");
+        jPanel1.add(jLabel13RJNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 480, -1, -1));
 
         jLabel7RomeuEjuli.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7RomeuEjuli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/PIZZA-ROMEU-E-JULIETA-800x480.png"))); // NOI18N
@@ -73,6 +75,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel7RomeuEjuli.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7RomeuEjuliMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel7RomeuEjuliMouseExited(evt);
             }
@@ -106,6 +111,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel10Muça.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MuçaMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel10MuçaMouseExited(evt);
             }
@@ -121,6 +129,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel11FrangoCap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11FrangoCapMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel11FrangoCapMouseExited(evt);
             }
@@ -136,6 +147,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel12Napoli.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12NapoliMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel12NapoliMouseExited(evt);
             }
@@ -259,25 +273,25 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel15nomePortuguesa.setText("Portuguesa");
         jPanel1.add(jLabel15nomePortuguesa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("Muçarela");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
+        jLabel16NomeMuça.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16NomeMuça.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel16NomeMuça.setText("Muçarela");
+        jPanel1.add(jLabel16NomeMuça, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("Coxinha de copo");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 870, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel18.setText(" Napolitana");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, -1, -1));
+        jLabel18NapoliNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel18NapoliNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel18NapoliNome.setText(" Napolitana");
+        jPanel1.add(jLabel18NapoliNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, -1, -1));
 
-        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel43.setText("Frango com catupiry");
-        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
+        jLabel43FranCatuNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel43FranCatuNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel43FranCatuNome.setText("Frango com catupiry");
+        jPanel1.add(jLabel43FranCatuNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(102, 102, 102));
@@ -352,12 +366,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel7RomeuEjuliMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseMoved
-        // TODO add your handling code here:
         jLabel7RomeuEjuli.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel7RomeuEjuliMouseMoved
 
     private void jLabel7RomeuEjuliMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseExited
-        // TODO add your handling code here:
         jLabel7RomeuEjuli.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel7RomeuEjuliMouseExited
 
@@ -378,12 +390,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel10MuçaMouseExited
 
     private void jLabel11FrangoCapMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseMoved
-        // TODO add your handling code here:
         jLabel11FrangoCap.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel11FrangoCapMouseMoved
 
     private void jLabel11FrangoCapMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseExited
-        // TODO add your handling code here:
         jLabel11FrangoCap.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel11FrangoCapMouseExited
 
@@ -396,27 +406,22 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel12NapoliMouseExited
 
     private void jLabel24CoxinhaFranMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24CoxinhaFranMouseMoved
-        // TODO add your handling code here:
          jLabel24CoxinhaFran.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel24CoxinhaFranMouseMoved
 
     private void jLabel24CoxinhaFranMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24CoxinhaFranMouseExited
-        // TODO add your handling code here:
          jLabel24CoxinhaFran.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel24CoxinhaFranMouseExited
 
     private void jLabel26PastelMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26PastelMouseMoved
-        // TODO add your handling code here:
         jLabel26Pastel.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel26PastelMouseMoved
 
     private void jLabel26PastelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26PastelMouseExited
-        // TODO add your handling code here:
         jLabel26Pastel.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel26PastelMouseExited
 
     private void jLabel32CoxinhaCopoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32CoxinhaCopoMouseMoved
-        // TODO add your handling code here:
         jLabel32CoxinhaCopo.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel32CoxinhaCopoMouseMoved
 
@@ -426,7 +431,6 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel32CoxinhaCopoMouseExited
 
     private void jLabel34AguaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel34AguaMouseMoved
-        // TODO add your handling code here:
         jLabel34Agua.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel34AguaMouseMoved
 
@@ -436,22 +440,18 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel34AguaMouseExited
 
     private void jLabel36SucoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36SucoMouseMoved
-        // TODO add your handling code here:
         jLabel36Suco.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel36SucoMouseMoved
 
     private void jLabel36SucoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36SucoMouseExited
-        // TODO add your handling code here:
         jLabel36Suco.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel36SucoMouseExited
 
     private void jLabel38RefriMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38RefriMouseMoved
-        // TODO add your handling code here:
         jLabel38Refri.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel38RefriMouseMoved
 
     private void jLabel38RefriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38RefriMouseExited
-        // TODO add your handling code here:
         jLabel38Refri.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel38RefriMouseExited
 
@@ -465,44 +465,52 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseMoved
 
     private void jLabel8PizzaMexicanaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseExited
-        // TODO add your handling code here:
         jLabel8PizzaMexicana.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(255, 255, 255)));
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseExited
 
+    //exibindo caixa de compra  
+    private void mostrarCaixa(JLabel jLabelIcon,JLabel nomeJLabel,String ingredientes,String preco){
+     CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
+        caixaDeCompra.jLabel2IconProduto.setIcon(jLabelIcon.getIcon());
+        caixaDeCompra.jLabel3NomeProduto.setText(nomeJLabel.getText());
+        caixaDeCompra.jLabel2Preço.setText(preco);
+        caixaDeCompra.jLabel2Igredientes.setText(ingredientes);
+        
+        caixaDeCompra.setVisible(true);
+    }
     private void jLabel8PizzaMexicanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseClicked
-        // TODO add your handling code here:
-        JanelaPrinci janelaPrinci = new JanelaPrinci();
-        CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
-        caixaDeCompra.jLabel2IconProduto.setIcon(jLabel8PizzaMexicana.getIcon());
-        caixaDeCompra.jLabel3NomeProduto.setText(jLabel48NomeMexicana.getText());
-        caixaDeCompra.jLabel2Preço.setText("24.99 R$");
-        caixaDeCompra.jLabel2Igredientes.setText("pao,pao,pao,pao,pao,pao,pao,");
-        
-        caixaDeCompra.setVisible(true);
+        mostrarCaixa(jLabel8PizzaMexicana, jLabel8PizzaMexicana, "agua,feijao,arroz", "89.99 R$");
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
-
     private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
-        // TODO add your handling code here:
-        JanelaPrinci janelaPrinci = new JanelaPrinci();
-        CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
-        caixaDeCompra.jLabel2IconProduto.setIcon(jLabel9Portuguesa.getIcon());
-        caixaDeCompra.jLabel3NomeProduto.setText(jLabel15nomePortuguesa.getText());
-        caixaDeCompra.jLabel2Preço.setText("39.99 R$");
-        caixaDeCompra.jLabel2Igredientes.setText("kkkkkkkkkkkkkkkkkk");
-        
-        caixaDeCompra.setVisible(true);
+        mostrarCaixa(jLabel9Portuguesa, jLabel9Portuguesa, "kkkkkkkkkkkk", "49.99 R$");
     }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
+    private void jLabel10MuçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MuçaMouseClicked
+        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "kkkkkkkkkkkk", "45.99 R$");
+    }//GEN-LAST:event_jLabel10MuçaMouseClicked
+
+    private void jLabel11FrangoCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseClicked
+        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "kkkkkkkkkkkk", "24.99 R$");
+    }//GEN-LAST:event_jLabel11FrangoCapMouseClicked
+
+    private void jLabel12NapoliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12NapoliMouseClicked
+        mostrarCaixa(jLabel12Napoli, jLabel18NapoliNome, "kkkkkkkkkkkk", "24.99 R$");
+
+    }//GEN-LAST:event_jLabel12NapoliMouseClicked
+
+    private void jLabel7RomeuEjuliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseClicked
+        mostrarCaixa(jLabel7RomeuEjuli, jLabel13RJNome, "kkkkkkkkkkkk", "24.99 R$");
+    }//GEN-LAST:event_jLabel7RomeuEjuliMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel10Muça;
     private javax.swing.JLabel jLabel11FrangoCap;
     private javax.swing.JLabel jLabel12Napoli;
-    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel13RJNome;
     private javax.swing.JLabel jLabel15nomePortuguesa;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel16NomeMuça;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel18NapoliNome;
     private javax.swing.JLabel jLabel24CoxinhaFran;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26Pastel;
@@ -514,7 +522,7 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel38Refri;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel43FranCatuNome;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
