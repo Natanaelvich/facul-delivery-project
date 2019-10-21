@@ -1,9 +1,13 @@
 package views;
 
 import AppPackage.AnimationClass;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class JanelaPrinci extends javax.swing.JFrame {
+
+    public static List<String> produtos = new ArrayList<>();
 
     public JanelaPrinci() {
         initComponents();
@@ -114,6 +118,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanel1Lateral.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jLabel21User.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_customer_32px_1.png"))); // NOI18N
+        jLabel21User.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel21User.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21UserMouseClicked(evt);
+            }
+        });
         jPanel1Lateral.add(jLabel21User, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 23, -1, -1));
 
         jLabel22Deslogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sair.png"))); // NOI18N
@@ -260,6 +270,11 @@ public class JanelaPrinci extends javax.swing.JFrame {
         getContentPane().add(jPanel1Lateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 690));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel20Minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Expand_Arrow_32px.png"))); // NOI18N
@@ -303,7 +318,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         animatioOPT.jLabelXLeft(350, 110, 5, 5, jLabel22Deslogar);
         animatioOPT.jLabelXRight(110, 350, 5, 5, jLabel22Deslogar);
-        
+
         animatioOPT.jLabelXLeft(400, 150, 5, 5, jLabel7inicio);
         animatioOPT.jLabelXRight(150, 400, 5, 5, jLabel7inicio);
     }//GEN-LAST:event_jLabel6MouseClicked
@@ -369,6 +384,17 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanelSlider2.nextPanel(10, jPanel2inicioLogo, rootPaneCheckingEnabled);
         jLabel7NomeEmpresa.setText("Inicio");
     }//GEN-LAST:event_jLabel7inicioMouseClicked
+
+    private void jLabel21UserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21UserMouseClicked
+        TelaDeUsuario telaDeUsuario = new TelaDeUsuario();
+        jPanelSlider2.add(telaDeUsuario);
+        jPanelSlider2.nextPanel(10, telaDeUsuario, rootPaneCheckingEnabled);
+        
+    }//GEN-LAST:event_jLabel21UserMouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+
+    }//GEN-LAST:event_jPanel4MouseClicked
 
     public static void main(String args[]) {
         try {

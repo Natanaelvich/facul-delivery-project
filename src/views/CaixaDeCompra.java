@@ -1,10 +1,15 @@
 package views;
 
+import entites.Produto;
+
 public class CaixaDeCompra extends javax.swing.JDialog {
+
+     JanelaPrinci janelaPrinci = new JanelaPrinci();
 
     public CaixaDeCompra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -20,9 +25,10 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2Igredientes = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel5AdicionarCarrinho = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel2Preço1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -57,8 +63,8 @@ public class CaixaDeCompra extends javax.swing.JDialog {
 
         jLabel2Preço.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2Preço.setForeground(new java.awt.Color(0, 204, 0));
-        jLabel2Preço.setText(".....");
-        jPanel1.add(jLabel2Preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
+        jLabel2Preço.setText("....");
+        jPanel1.add(jLabel2Preço, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
 
         jLabel2Igredientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2Igredientes.setForeground(new java.awt.Color(102, 102, 102));
@@ -79,17 +85,27 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Adicionar ao carrinho");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
+        jLabel5AdicionarCarrinho.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5AdicionarCarrinho.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5AdicionarCarrinho.setText("Adicionar ao carrinho");
+        jLabel5AdicionarCarrinho.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5AdicionarCarrinho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5AdicionarCarrinhoMouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5AdicionarCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/adicionar-ao-carrinho.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 325, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/money.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 225, -1, -1));
+
+        jLabel2Preço1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2Preço1.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel2Preço1.setText("R$");
+        jPanel1.add(jLabel2Preço1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 412));
 
@@ -98,8 +114,14 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1FecharCaixaCompraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1FecharCaixaCompraMouseClicked
-       dispose();      
+        dispose();
     }//GEN-LAST:event_jLabel1FecharCaixaCompraMouseClicked
+
+    private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
+        ProdutosPitstop.produtos.add(new Produto(jLabel3NomeProduto.getText(),Double.valueOf(jLabel2Preço.getText()) ,"kkkkkkk",1));
+        ProdutosPitstop.jLabel9QuantiCarrinho.setText(Integer.toString(ProdutosPitstop.produtos.size()));
+        dispose();
+    }//GEN-LAST:event_jLabel5AdicionarCarrinhoMouseClicked
 
     public static void main(String args[]) {
         try {
@@ -132,9 +154,10 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public javax.swing.JLabel jLabel2IconProduto;
     public javax.swing.JLabel jLabel2Igredientes;
     public javax.swing.JLabel jLabel2Preço;
+    public javax.swing.JLabel jLabel2Preço1;
     public javax.swing.JLabel jLabel3NomeProduto;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel5AdicionarCarrinho;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
