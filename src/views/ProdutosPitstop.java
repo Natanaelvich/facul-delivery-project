@@ -392,7 +392,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     public static void qtdcarrinho(){
     if (produtos.size() > 0) {
             jLabel9QuantiCarrinho.setText(Integer.toString(produtos.size()));
-        }
+        }else{
+        jLabel9QuantiCarrinho.setText("");
+    }
     }
     private void jLabel7RomeuEjuliMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseMoved
         jLabel7RomeuEjuli.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));

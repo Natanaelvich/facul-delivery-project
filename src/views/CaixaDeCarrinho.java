@@ -10,16 +10,29 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     public CaixaDeCarrinho(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.jScrollPane1Lista.getVerticalScrollBar().setUnitIncrement(15);
 
         if (ProdutosPitstop.produtos.size() > 0) {
             jPanel1Vazio.setVisible(false);
             addnewProduto();
             if (ProdutosPitstop.produtos.size() > 2) {
                 jPanel3aumen.setPreferredSize(new Dimension(678, 550));
+                jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, -1, -1));
+                jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 495, -1, -1));
+                jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 500, -1, -1));
+                jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 495, -1, -1));
                 if (ProdutosPitstop.produtos.size() > 3) {
                     jPanel3aumen.setPreferredSize(new Dimension(678, 750));
+                    jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 700, -1, -1));
+                    jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 695, -1, -1));
+                    jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 700, -1, -1));
+                jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 695, -1, -1));
                     if (ProdutosPitstop.produtos.size() > 4) {
-                        jPanel3aumen.setPreferredSize(new Dimension(678, 850));
+                        jPanel3aumen.setPreferredSize(new Dimension(678, 900));
+                        jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 850, -1, -1));
+                        jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 845, -1, -1));
+                        jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 850, -1, -1));
+                        jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 845, -1, -1));
                     }
                 }
             }
@@ -38,6 +51,10 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         jScrollPane1Lista = new javax.swing.JScrollPane();
         jPanel3aumen = new javax.swing.JPanel();
         jLabel1Fechar1 = new javax.swing.JLabel();
+        jLabel2ConfirTEXT = new javax.swing.JLabel();
+        jLabel4confirICON = new javax.swing.JLabel();
+        jLabel2CanceTEXT = new javax.swing.JLabel();
+        jLabel4CanceIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(698, 408));
@@ -83,6 +100,29 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         });
         jPanel3aumen.add(jLabel1Fechar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, -1, -1));
 
+        jLabel2ConfirTEXT.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2ConfirTEXT.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel2ConfirTEXT.setText("Confirmar Pedidos");
+        jLabel2ConfirTEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+
+        jLabel4confirICON.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ok.png"))); // NOI18N
+        jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 350, -1, -1));
+
+        jLabel2CanceTEXT.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2CanceTEXT.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2CanceTEXT.setText("Cancelar Todos");
+        jLabel2CanceTEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2CanceTEXT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2CanceTEXTMouseClicked(evt);
+            }
+        });
+        jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+
+        jLabel4CanceIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/erro.png"))); // NOI18N
+        jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
+
         jScrollPane1Lista.setViewportView(jPanel3aumen);
 
         getContentPane().add(jScrollPane1Lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 700, 410));
@@ -123,8 +163,8 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
             delete.addMouseListener(new java.awt.event.MouseAdapter() {
                 @Override
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
-                 jPanel3Carac.setVisible(false);
-                 ProdutosPitstop.produtos.remove(p);
+                    jPanel3Carac.setVisible(false);
+                    ProdutosPitstop.produtos.remove(p);
                 }
             });
 
@@ -143,6 +183,12 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         ProdutosPitstop.qtdcarrinho();
         dispose();
     }//GEN-LAST:event_jLabel1Fechar1MouseClicked
+
+    private void jLabel2CanceTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2CanceTEXTMouseClicked
+        ProdutosPitstop.produtos.clear();
+        ProdutosPitstop.qtdcarrinho();
+        dispose();
+    }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
 
     public static void main(String args[]) {
         try {
@@ -171,6 +217,10 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1Fechar;
     private javax.swing.JLabel jLabel1Fechar1;
     private javax.swing.JLabel jLabel1Nada;
+    private javax.swing.JLabel jLabel2CanceTEXT;
+    private javax.swing.JLabel jLabel2ConfirTEXT;
+    private javax.swing.JLabel jLabel4CanceIcon;
+    private javax.swing.JLabel jLabel4confirICON;
     private javax.swing.JPanel jPanel1Vazio;
     private javax.swing.JPanel jPanel3aumen;
     private javax.swing.JScrollPane jScrollPane1Lista;

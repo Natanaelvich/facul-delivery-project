@@ -9,7 +9,10 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public CaixaDeCompra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+        if(ProdutosPitstop.produtos.size() ==5){
+        jLabel5AdicionarCarrinho.setVisible(false);
+        jLabel6AdicionarCarrinhoIcon.setVisible(false);
+        }    
     }
 
     @SuppressWarnings("unchecked")
@@ -26,7 +29,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5AdicionarCarrinho = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel6AdicionarCarrinhoIcon = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel2Preço1 = new javax.swing.JLabel();
 
@@ -96,8 +99,8 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         });
         jPanel1.add(jLabel5AdicionarCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/adicionar-ao-carrinho.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 325, -1, -1));
+        jLabel6AdicionarCarrinhoIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/adicionar-ao-carrinho.png"))); // NOI18N
+        jPanel1.add(jLabel6AdicionarCarrinhoIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 325, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/money.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 225, -1, -1));
@@ -158,7 +161,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public javax.swing.JLabel jLabel3NomeProduto;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5AdicionarCarrinho;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel6AdicionarCarrinhoIcon;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
