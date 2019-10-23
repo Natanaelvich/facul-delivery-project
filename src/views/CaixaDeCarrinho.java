@@ -26,7 +26,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
                     jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 700, -1, -1));
                     jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 695, -1, -1));
                     jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 700, -1, -1));
-                jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 695, -1, -1));
+                    jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 695, -1, -1));
                     if (ProdutosPitstop.produtos.size() > 4) {
                         jPanel3aumen.setPreferredSize(new Dimension(678, 900));
                         jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 850, -1, -1));
