@@ -14,22 +14,22 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         initComponents();
         this.jScrollPane1Lista.getVerticalScrollBar().setUnitIncrement(15);
 
-        if (ProdutosPitstop.produtos.size() > 0) {
+        if (JanelaPrinci.produtos.size() > 0) {
             jPanel1Vazio.setVisible(false);
             addnewProduto();
-            if (ProdutosPitstop.produtos.size() > 2) {
+            if (JanelaPrinci.produtos.size() > 2) {
                 jPanel3aumen.setPreferredSize(new Dimension(678, 550));
                 jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, -1, -1));
                 jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 495, -1, -1));
                 jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 500, -1, -1));
                 jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 495, -1, -1));
-                if (ProdutosPitstop.produtos.size() > 3) {
+                if (JanelaPrinci.produtos.size() > 3) {
                     jPanel3aumen.setPreferredSize(new Dimension(678, 750));
                     jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 700, -1, -1));
                     jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 695, -1, -1));
                     jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 700, -1, -1));
                     jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 695, -1, -1));
-                    if (ProdutosPitstop.produtos.size() > 4) {
+                    if (JanelaPrinci.produtos.size() > 4) {
                         jPanel3aumen.setPreferredSize(new Dimension(678, 900));
                         jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 850, -1, -1));
                         jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 845, -1, -1));
@@ -140,7 +140,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
 
     public void addnewProduto() {
         int posiYP = 30;
-        for (int i = 0; i < ProdutosPitstop.produtos.size(); i++) {
+        for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
 
             JPanel jPanel3Carac = new javax.swing.JPanel();
             jPanel3Carac.setBackground(new java.awt.Color(204, 204, 204));
@@ -151,13 +151,13 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
             JLabel jLabel1NomeP = new javax.swing.JLabel();
             jLabel1NomeP.setFont(new java.awt.Font("Tahoma", 0, 18));
             jLabel1NomeP.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel1NomeP.setText("Descrição  : " + ProdutosPitstop.produtos.get(i).getDescricao());
+            jLabel1NomeP.setText("Descrição  : " + JanelaPrinci.produtos.get(i).getDescricao());
             jPanel3Carac.add(jLabel1NomeP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
             //preco
             JLabel preco = new javax.swing.JLabel();
             preco.setFont(new java.awt.Font("Tahoma", 0, 18));
             preco.setForeground(new java.awt.Color(102, 102, 102));
-            preco.setText("Preco  : " + ProdutosPitstop.produtos.get(i).getPreco());
+            preco.setText("Preco  : " + JanelaPrinci.produtos.get(i).getPreco());
             jPanel3Carac.add(preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
             //delete
@@ -166,12 +166,12 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
             delete.setForeground(new java.awt.Color(102, 102, 102));
             delete.setText("x");
             delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Produto p = ProdutosPitstop.produtos.get(i);
+            Produto p = JanelaPrinci.produtos.get(i);
             delete.addMouseListener(new java.awt.event.MouseAdapter() {
                 @Override
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     jPanel3Carac.setVisible(false);
-                    ProdutosPitstop.produtos.remove(p);
+                    JanelaPrinci.produtos.remove(p);
                 }
             });
 
@@ -192,7 +192,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     }//GEN-LAST:event_jLabel1Fechar1MouseClicked
 
     private void jLabel2CanceTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2CanceTEXTMouseClicked
-        ProdutosPitstop.produtos.clear();
+        JanelaPrinci.produtos.clear();
         ProdutosPitstop.qtdcarrinho();
         dispose();
     }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked

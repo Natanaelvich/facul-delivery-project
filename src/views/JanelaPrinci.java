@@ -1,13 +1,13 @@
 package views;
 
 import AppPackage.AnimationClass;
+import entites.Produto;
 import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JOptionPane;
 
 public class JanelaPrinci extends javax.swing.JFrame {
 
-    public static List<String> produtos = new ArrayList<>();
+    public static ArrayList<Produto> produtos = new ArrayList<>();
 
     public JanelaPrinci() {
         initComponents();

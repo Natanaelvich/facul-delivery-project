@@ -9,7 +9,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public CaixaDeCompra(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        if(ProdutosPitstop.produtos.size() ==5){
+        if(JanelaPrinci.produtos.size() ==5){
         jLabel5AdicionarCarrinho.setVisible(false);
         jLabel6AdicionarCarrinhoIcon.setVisible(false);
         }    
@@ -121,8 +121,9 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     }//GEN-LAST:event_jLabel1FecharCaixaCompraMouseClicked
 
     private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
-        ProdutosPitstop.produtos.add(new Produto(jLabel3NomeProduto.getText(),Double.valueOf(jLabel2Preço.getText()) ,"kkkkkkk",1));
+        JanelaPrinci.produtos.add(new Produto(jLabel3NomeProduto.getText(),Double.valueOf(jLabel2Preço.getText()) ,"kkkkkkk",1));
         ProdutosPitstop.qtdcarrinho();
+        ProdutosPontes.qtdcarrinho();
         dispose();
     }//GEN-LAST:event_jLabel5AdicionarCarrinhoMouseClicked
 

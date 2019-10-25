@@ -9,7 +9,6 @@ import javax.swing.JLabel;
 public class ProdutosPitstop extends javax.swing.JPanel {
 
     JanelaPrinci janelaPrinci = new JanelaPrinci();
-    public static List<Produto> produtos = new ArrayList<>();
     
 
     public ProdutosPitstop() {
@@ -390,8 +389,8 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     public static void qtdcarrinho(){
-    if (produtos.size() > 0) {
-            jLabel9QuantiCarrinho.setText(Integer.toString(produtos.size()));
+    if (JanelaPrinci.produtos.size() > 0) {
+            jLabel9QuantiCarrinho.setText(Integer.toString(JanelaPrinci.produtos.size()));
         }else{
         jLabel9QuantiCarrinho.setText("");
     }

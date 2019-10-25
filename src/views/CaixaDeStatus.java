@@ -15,8 +15,8 @@ public class CaixaDeStatus extends javax.swing.JDialog {
         initComponents();
         this.jScrollPane1Lista.getVerticalScrollBar().setUnitIncrement(15);
         
-        ProdutosPitstop.produtos.forEach((p) -> {
-            pedidoStatus.add(new PedidoStatus(1, ProdutosPitstop.produtos.indexOf(p), "00/00/0000", 1));
+        JanelaPrinci.produtos.forEach((p) -> {
+            pedidoStatus.add(new PedidoStatus(1, JanelaPrinci.produtos.indexOf(p), "00/00/0000", 1));
         });
         if (pedidoStatus.size() > 0) {
             System.out.println("tou entrando");
