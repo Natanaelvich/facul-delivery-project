@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 
 public class CaixaDeCarrinho extends javax.swing.JDialog {
 
+     JanelaPrinci janelaPrinci = new JanelaPrinci();
+     
     public CaixaDeCarrinho(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -104,6 +106,11 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         jLabel2ConfirTEXT.setForeground(new java.awt.Color(0, 204, 0));
         jLabel2ConfirTEXT.setText("Confirmar Pedidos");
         jLabel2ConfirTEXT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2ConfirTEXT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2ConfirTEXTMouseClicked(evt);
+            }
+        });
         jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         jLabel4confirICON.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ok.png"))); // NOI18N
@@ -189,6 +196,13 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         ProdutosPitstop.qtdcarrinho();
         dispose();
     }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
+
+    private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
+        dispose();
+        CaixaDeStatus caixaDeStatus = new CaixaDeStatus(janelaPrinci, rootPaneCheckingEnabled);
+        caixaDeStatus.setVisible(true);
+    
+    }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked
 
     public static void main(String args[]) {
         try {
