@@ -71,6 +71,8 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel21Fechar = new javax.swing.JLabel();
         jLabel7NomeEmpresa = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
+        jLabel9QuantiCarrinho = new javax.swing.JLabel();
+        jLabel7CarrinhoTelaInicial = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -304,12 +306,34 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jSeparator7.setForeground(new java.awt.Color(102, 102, 102));
         jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 300, 10));
 
+        jLabel9QuantiCarrinho.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel9QuantiCarrinho.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel9QuantiCarrinho.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel4.add(jLabel9QuantiCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 40));
+
+        jLabel7CarrinhoTelaInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/carrinho.png"))); // NOI18N
+        jLabel7CarrinhoTelaInicial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7CarrinhoTelaInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7CarrinhoTelaInicialMouseClicked(evt);
+            }
+        });
+        jPanel4.add(jLabel7CarrinhoTelaInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
+
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 760, 80));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public static void qtdcarrinho() {
+        if (produtos.size() > 0) {
+            jLabel9QuantiCarrinho.setText(Integer.toString(produtos.size()));
+            System.out.println("sim");
+        } else {
+            jLabel9QuantiCarrinho.setText("0");
+        }
+    }
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         AnimationClass animatioOPT = new AnimationClass();
 
@@ -360,7 +384,9 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanelSlider2.add(produtosPitstops);
         jPanelSlider2.nextPanel(10, produtosPitstops, rootPaneCheckingEnabled);
         jLabel7NomeEmpresa.setText("PitStop");
-
+        
+        CaixaDeCarrinhoInterna caixaDeCarrinhoInterna = new CaixaDeCarrinhoInterna();
+        jPanel4.add(caixaDeCarrinhoInterna);
     }//GEN-LAST:event_jLabel26PitStopMouseClicked
 
     private void jLabel27PontesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27PontesMouseClicked
@@ -389,12 +415,17 @@ public class JanelaPrinci extends javax.swing.JFrame {
         TelaDeUsuario telaDeUsuario = new TelaDeUsuario();
         jPanelSlider2.add(telaDeUsuario);
         jPanelSlider2.nextPanel(10, telaDeUsuario, rootPaneCheckingEnabled);
-        
+
     }//GEN-LAST:event_jLabel21UserMouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
 
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jLabel7CarrinhoTelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7CarrinhoTelaInicialMouseClicked
+        CaixaDeCarrinho caixaDeCarrinho = new CaixaDeCarrinho(new JanelaPrinci(), true);
+        caixaDeCarrinho.setVisible(true);
+    }//GEN-LAST:event_jLabel7CarrinhoTelaInicialMouseClicked
 
     public static void main(String args[]) {
         try {
@@ -436,14 +467,16 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7CarrinhoTelaInicial;
     private javax.swing.JLabel jLabel7Iconlogo;
     private javax.swing.JLabel jLabel7NomeEmpresa;
     private javax.swing.JLabel jLabel7inicio;
     private javax.swing.JLabel jLabel8;
+    public static javax.swing.JLabel jLabel9QuantiCarrinho;
     private javax.swing.JPanel jPanel1Lateral;
     private javax.swing.JPanel jPanel2inicioLogo;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private static javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider2;
     private javax.swing.JScrollPane jScrollPane1;

@@ -3,9 +3,9 @@ package views;
 import java.awt.Color;
 import javax.swing.JLabel;
 
-public class ProdutosPontes extends javax.swing.JPanel {
+public  class ProdutosPontes extends javax.swing.JPanel {
 
-    JanelaPrinci janelaPrinci = new JanelaPrinci();
+    public  JanelaPrinci janelaPrinci = new JanelaPrinci();
 
     public ProdutosPontes() {
         initComponents();

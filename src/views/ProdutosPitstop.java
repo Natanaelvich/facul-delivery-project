@@ -1,9 +1,6 @@
 package views;
 
-import entites.Produto;
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JLabel;
 
 public class ProdutosPitstop extends javax.swing.JPanel {
@@ -388,12 +385,12 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         add(jScrollPane2ProdutosPitsop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, -1, 610));
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void qtdcarrinho(){
-    if (JanelaPrinci.produtos.size() > 0) {
+   public static void qtdcarrinho() {
+        if (JanelaPrinci.produtos.size() > 0) {
             jLabel9QuantiCarrinho.setText(Integer.toString(JanelaPrinci.produtos.size()));
-        }else{
-        jLabel9QuantiCarrinho.setText("");
-    }
+        } else {
+            jLabel9QuantiCarrinho.setText("");
+        }
     }
     private void jLabel7RomeuEjuliMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseMoved
         jLabel7RomeuEjuli.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
