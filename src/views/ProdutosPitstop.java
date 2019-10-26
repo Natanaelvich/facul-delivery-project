@@ -6,12 +6,13 @@ import javax.swing.JLabel;
 public class ProdutosPitstop extends javax.swing.JPanel {
 
     JanelaPrinci janelaPrinci = new JanelaPrinci();
-    
+        public static boolean ativo = false;
 
     public ProdutosPitstop() {
         initComponents();
         this.jScrollPane2ProdutosPitsop.getVerticalScrollBar().setUnitIncrement(20);
         qtdcarrinho();
+        ativo = true;
     }
 
     @SuppressWarnings("unchecked")

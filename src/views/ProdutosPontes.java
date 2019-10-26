@@ -6,11 +6,13 @@ import javax.swing.JLabel;
 public  class ProdutosPontes extends javax.swing.JPanel {
 
     public  JanelaPrinci janelaPrinci = new JanelaPrinci();
+    public static boolean ativo = false;
 
     public ProdutosPontes() {
         initComponents();
         this.jScrollPane2ProdutosPitsop.getVerticalScrollBar().setUnitIncrement(20);
         qtdcarrinho();
+        ativo = true;
     }
 
     @SuppressWarnings("unchecked")
@@ -384,7 +386,7 @@ public  class ProdutosPontes extends javax.swing.JPanel {
         add(jScrollPane2ProdutosPitsop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, -1, 610));
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void qtdcarrinho() {
+   public static void qtdcarrinho() {
         if (JanelaPrinci.produtos.size() > 0) {
             jLabel9QuantiCarrinho.setText(Integer.toString(JanelaPrinci.produtos.size()));
         } else {
