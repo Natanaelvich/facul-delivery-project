@@ -14,7 +14,7 @@ public class ConnectDao {
     private static Connection conn;
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:myql://localhost:3306/aifurbe";
+    private static final String URL = "jdbc:mysql://localhost:3306/aifurbe";
     private static final String USER = "root";
     private static final String PASS = "";
 
