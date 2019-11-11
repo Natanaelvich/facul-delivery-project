@@ -1,5 +1,6 @@
 package views;
 
+import entites.Usuario;
 import javax.swing.JOptionPane;
 
 public class TelaDeLogin extends javax.swing.JFrame {
@@ -34,15 +35,19 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
+        jFormattedTextField1Telefone = new javax.swing.JFormattedTextField();
+        jPasswordField1Pass = new javax.swing.JPasswordField();
+        jPasswordField2PassConfirm = new javax.swing.JPasswordField();
+        jButton2CadastrarUser = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jTextField1User1 = new javax.swing.JTextField();
-        jTextField1User2 = new javax.swing.JTextField();
+        jTextField1Email = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jLabel11ErroSenha = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -144,12 +149,12 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 51, 51));
         jLabel4.setText("Nome");
-        jPanel3Cadastro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        jPanel3Cadastro.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 51, 51));
         jLabel5.setText("Email");
-        jPanel3Cadastro.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel3Cadastro.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 51, 51));
@@ -159,33 +164,46 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 51, 51));
         jLabel7.setText("Senha");
-        jPanel3Cadastro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jPanel3Cadastro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("Confirmar Senha");
-        jPanel3Cadastro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
+        jPanel3Cadastro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
-        jFormattedTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jFormattedTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3Cadastro.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 30));
+        jFormattedTextField1Telefone.setBackground(new java.awt.Color(204, 204, 204));
+        jFormattedTextField1Telefone.setBorder(null);
+        jFormattedTextField1Telefone.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel3Cadastro.add(jFormattedTextField1Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 190, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
-        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3Cadastro.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 190, 30));
+        jPasswordField1Pass.setBackground(new java.awt.Color(204, 204, 204));
+        jPasswordField1Pass.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordField1Pass.setBorder(null);
+        jPanel3Cadastro.add(jPasswordField1Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 190, 30));
 
-        jPasswordField2.setBackground(new java.awt.Color(204, 204, 204));
-        jPasswordField2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3Cadastro.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 190, 30));
+        jPasswordField2PassConfirm.setBackground(new java.awt.Color(204, 204, 204));
+        jPasswordField2PassConfirm.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordField2PassConfirm.setBorder(null);
+        jPasswordField2PassConfirm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2PassConfirmActionPerformed(evt);
+            }
+        });
+        jPanel3Cadastro.add(jPasswordField2PassConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 190, 30));
 
-        jButton2.setBackground(new java.awt.Color(102, 0, 102));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 51, 51));
-        jButton2.setText("Cadastrar");
-        jButton2.setBorder(null);
-        jButton2.setOpaque(false);
-        jButton2.setRolloverEnabled(true);
-        jPanel3Cadastro.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 130, 40));
+        jButton2CadastrarUser.setBackground(new java.awt.Color(102, 0, 102));
+        jButton2CadastrarUser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2CadastrarUser.setForeground(new java.awt.Color(255, 51, 51));
+        jButton2CadastrarUser.setText("Cadastrar");
+        jButton2CadastrarUser.setBorder(null);
+        jButton2CadastrarUser.setOpaque(false);
+        jButton2CadastrarUser.setRolloverEnabled(true);
+        jButton2CadastrarUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2CadastrarUserMouseClicked(evt);
+            }
+        });
+        jPanel3Cadastro.add(jButton2CadastrarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 130, 40));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3Cadastro.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 190, -1));
@@ -194,13 +212,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jTextField1User1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1User1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1User1.setBorder(null);
-        jPanel3Cadastro.add(jTextField1User1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 190, 40));
+        jPanel3Cadastro.add(jTextField1User1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 30));
 
-        jTextField1User2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1User2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1User2.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField1User2.setBorder(null);
-        jPanel3Cadastro.add(jTextField1User2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 190, 40));
+        jTextField1Email.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField1Email.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1Email.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField1Email.setBorder(null);
+        jPanel3Cadastro.add(jTextField1Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 190, 30));
 
         jSeparator4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3Cadastro.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 190, -1));
@@ -213,6 +231,18 @@ public class TelaDeLogin extends javax.swing.JFrame {
             }
         });
         jPanel3Cadastro.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 40, -1));
+
+        jSeparator5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3Cadastro.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 190, 10));
+
+        jSeparator6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3Cadastro.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 190, 10));
+
+        jSeparator7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3Cadastro.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 190, 10));
+
+        jLabel11ErroSenha.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel3Cadastro.add(jLabel11ErroSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
 
         jPanelSlider1.add(jPanel3Cadastro, "card2");
 
@@ -255,10 +285,36 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
         jPanelSlider1.nextPanel(10, jPanel2Logo, rootPaneCheckingEnabled);
-         jLabel9NaoTemCadastro.setVisible(true);
+        jLabel9NaoTemCadastro.setVisible(true);
         jLabel10BTNcadastro.setVisible(true);
         jSeparator5SeparadorBTNcadastro.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jButton2CadastrarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2CadastrarUserMouseClicked
+        // TODO add your handling code here:
+        String nome = jTextField1User.getText();
+        String email = jTextField1Email.getText();
+        String telefone = jFormattedTextField1Telefone.getText();
+        String senha = jPasswordField1Pass.getText();
+        String senhaConfir = jPasswordField2PassConfirm.getText();
+
+        if (senha.equals(senhaConfir)) {
+            Usuario user = new Usuario(nome, email, telefone, senha);
+            jLabel11ErroSenha.setVisible(false);
+            jPanelSlider1.nextPanel(10, jPanel2Logo, rootPaneCheckingEnabled);
+            jLabel9NaoTemCadastro.setVisible(true);
+            jLabel10BTNcadastro.setVisible(true);
+            jSeparator5SeparadorBTNcadastro.setVisible(true);
+            
+        } else {
+            jLabel11ErroSenha.setVisible(true);
+            jLabel11ErroSenha.setText("As senhas não coincidem");
+        }
+    }//GEN-LAST:event_jButton2CadastrarUserMouseClicked
+
+    private void jPasswordField2PassConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2PassConfirmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2PassConfirmActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -271,20 +327,19 @@ public class TelaDeLogin extends javax.swing.JFrame {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaDeLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaDeLogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaDeLogin().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JButton jButton2CadastrarUser;
+    private javax.swing.JFormattedTextField jFormattedTextField1Telefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel10BTNcadastro;
+    private javax.swing.JLabel jLabel11ErroSenha;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -299,16 +354,19 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2Logo;
     private javax.swing.JPanel jPanel3Cadastro;
     private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField jPasswordField1Pass;
+    private javax.swing.JPasswordField jPasswordField2PassConfirm;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator5SeparadorBTNcadastro;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JTextField jTextField1Email;
     private javax.swing.JTextField jTextField1User;
     private javax.swing.JTextField jTextField1User1;
-    private javax.swing.JTextField jTextField1User2;
     private javax.swing.JTextField jTextField2Senha;
     // End of variables declaration//GEN-END:variables
 }
