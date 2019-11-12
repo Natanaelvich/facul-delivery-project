@@ -2,7 +2,11 @@ package views;
 
 import Dao.UserDao;
 import entites.Usuario;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.text.MaskFormatter;
 
 public class TelaDeLogin extends javax.swing.JFrame {
 
@@ -185,7 +189,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
 
         jFormattedTextField1Telefone.setBackground(new java.awt.Color(204, 204, 204));
         jFormattedTextField1Telefone.setBorder(null);
-        jFormattedTextField1Telefone.setForeground(new java.awt.Color(0, 0, 0));
+        jFormattedTextField1Telefone.setForeground(new java.awt.Color(51, 51, 51));
+        try {
+            jFormattedTextField1Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextField1Telefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel3Cadastro.add(jFormattedTextField1Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 190, 30));
 
         jPasswordField1PassCadastro.setBackground(new java.awt.Color(204, 204, 204));
@@ -253,8 +263,9 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jSeparator7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3Cadastro.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 190, 10));
 
+        jLabel11ErroSenha.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11ErroSenha.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel3Cadastro.add(jLabel11ErroSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
+        jPanel3Cadastro.add(jLabel11ErroSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 230, 20));
 
         jLabel11UserExist.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11UserExist.setForeground(new java.awt.Color(255, 0, 0));
@@ -277,21 +288,23 @@ public class TelaDeLogin extends javax.swing.JFrame {
         if (res == 0) {
             System.exit(0);
         }
+        
+        
     }//GEN-LAST:event_jLabel3MouseClicked
 
     //login
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-          //verificando se esta cadastrado
+
+        //verificando se esta cadastrado
         boolean exist = UserDao.getUserAndSenha(jTextField1User.getText(), jTextField2Senha.getText());
-        if(exist){
+        if (exist) {
             JanelaPrinci janelaPrinci = new JanelaPrinci();
             this.dispose();
             janelaPrinci.setVisible(true);
-        }else{
+        } else {
             jLabel11UserAdnSenhaIncorret.setText("Nome ou senha INCORRETOS");
         }
- 
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -315,32 +328,39 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private void jButton2CadastrarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2CadastrarUserMouseClicked
         String nome = jTextField1UserCadastro.getText();
         String email = jTextField1Email.getText();
-        String telefone = jFormattedTextField1Telefone.getText();
+        String telefone = jFormattedTextField1Telefone.getText().replace("(", "").replace(")", "").replace("-","");
         String senha = jPasswordField1PassCadastro.getText();
         String senhaConfir = jPasswordField2PassConfirm.getText();
+        System.out.println(telefone.length());
+        System.out.println(telefone);
 
-        //verificando se as senhas confirmam
-        if (senha.equals(senhaConfir)) {
-            Usuario user = new Usuario(nome, email, telefone, senha);
-            //verificando se usuario existe
-            boolean userExist = UserDao.getUser(user);
-            if (userExist) {
-                jLabel11UserExist.setText("Já existe esse usuário");
-            } else {
-                //mudando para logo
-                jLabel11ErroSenha.setVisible(false);
-                jLabel11UserExist.setVisible(false);
-                //salvando usuario
-                UserDao.SalvarUser(user);
-                jPanelSlider1.nextPanel(10, jPanel2Logo, rootPaneCheckingEnabled);
-                jLabel9NaoTemCadastro.setVisible(true);
-                jLabel10BTNcadastro.setVisible(true);
-                jSeparator5SeparadorBTNcadastro.setVisible(true);
-            }
-
+        if (nome.equals("") || email.equals("") || telefone.equals("") || senhaConfir.equals("") || senhaConfir.equals("")) {
+            jLabel11ErroSenha.setText("Preencha todos os campos");
         } else {
-            jLabel11ErroSenha.setVisible(true);
-            jLabel11ErroSenha.setText("As senhas não coincidem");
+
+            //verificando se as senhas confirmam
+            if (senha.equals(senhaConfir)) {
+                Usuario user = new Usuario(nome, email, telefone, senha);
+                //verificando se usuario existe
+                boolean userExist = UserDao.getUser(user);
+                if (userExist) {
+                    jLabel11UserExist.setText("Já existe esse usuário");
+                } else {
+                    //mudando para logo
+                    jLabel11ErroSenha.setVisible(false);
+                    jLabel11UserExist.setVisible(false);
+                    //salvando usuario
+                    UserDao.SalvarUser(user);
+                    jPanelSlider1.nextPanel(10, jPanel2Logo, rootPaneCheckingEnabled);
+                    jLabel9NaoTemCadastro.setVisible(true);
+                    jLabel10BTNcadastro.setVisible(true);
+                    jSeparator5SeparadorBTNcadastro.setVisible(true);
+                }
+
+            } else {
+                jLabel11ErroSenha.setVisible(true);
+                jLabel11ErroSenha.setText("As senhas não coincidem");
+            }
         }
     }//GEN-LAST:event_jButton2CadastrarUserMouseClicked
 
@@ -349,9 +369,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField2PassConfirmActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    
-      
-        
+
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     public static void main(String args[]) {

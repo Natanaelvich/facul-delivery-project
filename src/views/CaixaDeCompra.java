@@ -120,7 +120,6 @@ public class CaixaDeCompra extends javax.swing.JDialog {
 
     private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
         JanelaPrinci.produtos.add(new Produto(jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()), "kkkkkkk", 1));
-        JanelaPrinci.qtdcarrinho();
         if (ProdutosPitstop.ativo) {
             ProdutosPitstop.qtdcarrinho();
         }

@@ -20,17 +20,34 @@ public class Produto {
         return descricao;
     }
 
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public double getPreco() {
         return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public String getIngredientes() {
         return ingredientes;
     }
 
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
     public int getEmpresa_id() {
         return empresa_id;
     }
+
+    public void setEmpresa_id(int empresa_id) {
+        this.empresa_id = empresa_id;
+    }
+
     
     
 }

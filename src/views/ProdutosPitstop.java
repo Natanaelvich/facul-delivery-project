@@ -507,26 +507,26 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         caixaDeCompra.setVisible(true);
     }
     private void jLabel8PizzaMexicanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseClicked
-        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "agua,feijao,arroz", "89.99");
+        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "frango,calabresa,pimenta", "24.99");
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
     private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
-        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "kkkkkkkkkkkk", "49.99");
+        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "frango,calabresa,pimenta", "49.99");
     }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
     private void jLabel10MuçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MuçaMouseClicked
-        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "kkkkkkkkkkkk", "45.99");
+        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "frango,calabresa,pimenta", "45.99");
     }//GEN-LAST:event_jLabel10MuçaMouseClicked
 
     private void jLabel11FrangoCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseClicked
-        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "kkkkkkkkkkkk", "24.99");
+        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "frango,calabresa,pimenta", "24.99");
     }//GEN-LAST:event_jLabel11FrangoCapMouseClicked
 
     private void jLabel12NapoliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12NapoliMouseClicked
-        mostrarCaixa(jLabel12Napoli, jLabel18NapoliNome, "kkkkkkkkkkkk", "24.99");
+        mostrarCaixa(jLabel12Napoli, jLabel18NapoliNome, "frango,calabresa,pimenta", "24.99");
 
     }//GEN-LAST:event_jLabel12NapoliMouseClicked
 
     private void jLabel7RomeuEjuliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseClicked
-        mostrarCaixa(jLabel7RomeuEjuli, jLabel13RJNome, "kkkkkkkkkkkk", "24.99");
+        mostrarCaixa(jLabel7RomeuEjuli, jLabel13RJNome, "frango,calabresa,pimenta", "24.99");
     }//GEN-LAST:event_jLabel7RomeuEjuliMouseClicked
 
     private void jLabel7CarrinhoTelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7CarrinhoTelaInicialMouseClicked
