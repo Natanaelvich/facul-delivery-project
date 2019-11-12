@@ -1,5 +1,6 @@
 package views;
 
+import com.sun.org.apache.bcel.internal.Constants;
 import java.awt.Color;
 import javax.swing.JLabel;
 
@@ -497,36 +498,35 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseExited
 
     //exibindo caixa de compra  
-    private void mostrarCaixa(JLabel jLabelIcon, JLabel nomeJLabel, String ingredientes, String preco) {
+    private void mostrarCaixa(JLabel jLabelIcon, JLabel nomeJLabel, String ingredientes, String preco, int id_empresa,int id_produto) {
         CaixaDeCompra caixaDeCompra = new CaixaDeCompra(janelaPrinci, true);
         caixaDeCompra.jLabel2IconProduto.setIcon(jLabelIcon.getIcon());
         caixaDeCompra.jLabel3NomeProduto.setText(nomeJLabel.getText());
         caixaDeCompra.jLabel2Preço.setText(preco);
         caixaDeCompra.jLabel2Igredientes.setText(ingredientes);
+        caixaDeCompra.jLabel3Empresa.setText(String.valueOf(id_empresa));
+        caixaDeCompra.jLabel3IdProduto.setText(String.valueOf(id_produto));
 
         caixaDeCompra.setVisible(true);
     }
     private void jLabel8PizzaMexicanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseClicked
-        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "frango,calabresa,pimenta", "24.99");
+        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "frango,calabresa,pimenta", "24.99",1,2);
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
     private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
-        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "frango,calabresa,pimenta", "49.99");
+        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "frango,calabresa,pimenta", "49.99",1,3);
     }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
     private void jLabel10MuçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MuçaMouseClicked
-        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "frango,calabresa,pimenta", "45.99");
+        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "frango,calabresa,pimenta", "45.99",1,4);
     }//GEN-LAST:event_jLabel10MuçaMouseClicked
-
     private void jLabel11FrangoCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseClicked
-        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "frango,calabresa,pimenta", "24.99");
+        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "frango,calabresa,pimenta", "24.99",1,5);
     }//GEN-LAST:event_jLabel11FrangoCapMouseClicked
-
     private void jLabel12NapoliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12NapoliMouseClicked
-        mostrarCaixa(jLabel12Napoli, jLabel18NapoliNome, "frango,calabresa,pimenta", "24.99");
-
+        mostrarCaixa(jLabel12Napoli, jLabel18NapoliNome, "frango,calabresa,pimenta", "24.99",1,6);
     }//GEN-LAST:event_jLabel12NapoliMouseClicked
 
     private void jLabel7RomeuEjuliMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7RomeuEjuliMouseClicked
-        mostrarCaixa(jLabel7RomeuEjuli, jLabel13RJNome, "frango,calabresa,pimenta", "24.99");
+        mostrarCaixa(jLabel7RomeuEjuli, jLabel13RJNome, "frango,calabresa,pimenta", "24.99",1,7);
     }//GEN-LAST:event_jLabel7RomeuEjuliMouseClicked
 
     private void jLabel7CarrinhoTelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7CarrinhoTelaInicialMouseClicked

@@ -2,11 +2,8 @@ package views;
 
 import Dao.UserDao;
 import entites.Usuario;
-import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.text.MaskFormatter;
+
 
 public class TelaDeLogin extends javax.swing.JFrame {
 
@@ -26,7 +23,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jTextField1User = new javax.swing.JTextField();
         jTextField2Senha = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel3Fechar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel9NaoTemCadastro = new javax.swing.JLabel();
         jLabel10BTNcadastro = new javax.swing.JLabel();
@@ -95,14 +92,14 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jTextField2Senha.setBorder(null);
         jPanel2Login.add(jTextField2Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 314, 190, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Multiply_32px.png"))); // NOI18N
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel3Fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Multiply_32px.png"))); // NOI18N
+        jLabel3Fechar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3Fechar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                jLabel3FecharMouseClicked(evt);
             }
         });
-        jPanel2Login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, -1, -1));
+        jPanel2Login.add(jLabel3Fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 0, 102));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -281,16 +278,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
+    private void jLabel3FecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3FecharMouseClicked
         int dialog = JOptionPane.YES_NO_OPTION;
         int res = JOptionPane.showConfirmDialog(null, "REALMENTE DESEJA SAIR?", "SAIR", dialog);
         if (res == 0) {
             System.exit(0);
         }
-        
-        
-    }//GEN-LAST:event_jLabel3MouseClicked
+    }//GEN-LAST:event_jLabel3FecharMouseClicked
 
     //login
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -400,7 +394,7 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11UserAdnSenhaIncorret;
     private javax.swing.JLabel jLabel11UserExist;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel3Fechar;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -424,8 +418,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTextField jTextField1Email;
-    private javax.swing.JTextField jTextField1User;
+    public static javax.swing.JTextField jTextField1User;
     private javax.swing.JTextField jTextField1UserCadastro;
-    private javax.swing.JTextField jTextField2Senha;
+    public static javax.swing.JTextField jTextField2Senha;
     // End of variables declaration//GEN-END:variables
 }

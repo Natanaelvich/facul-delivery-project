@@ -1,14 +1,22 @@
 package views;
 
+import Dao.ConnectDao;
+import Dao.PedidosDao;
 import entites.Produto;
 import java.awt.Dimension;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class CaixaDeCarrinho extends javax.swing.JDialog {
 
-     JanelaPrinci janelaPrinci = new JanelaPrinci();
-     
+    JanelaPrinci janelaPrinci = new JanelaPrinci();
+
     public CaixaDeCarrinho(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -198,10 +206,44 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
 
     private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
+        Connection conn = ConnectDao.getConnection();
+        String sql = "SELECT * FROM usuario WHERE  nome = '" + TelaDeLogin.jTextField1User.getText() + "' AND senha = '" + TelaDeLogin.jTextField2Senha.getText() + "'";
+        System.out.println(TelaDeLogin.jTextField1User.getText());
+        System.out.println(TelaDeLogin.jTextField2Senha.getText());
+        ResultSet res;
+        Statement statement;
+        int id = 0;
+        try {
+            statement = conn.createStatement();
+            res = statement.executeQuery(sql);
+            if (res.next()) {
+                id = res.getInt("id");
+                System.out.println(res.getInt("id"));
+            }else{
+                System.out.println("nenum resultado");
+            }
+            ConnectDao.closeConnection(conn);
+            ConnectDao.closeConnectionStatement(statement);
+            ConnectDao.closeConnectionPrepare(res);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(CaixaDeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
+
+            PedidosDao.salvarPedido(id, JanelaPrinci.produtos.get(i).getEmpresa_id());
+            
+            System.out.println(JanelaPrinci.produtos.get(i).toString());
+            if (JanelaPrinci.produtos.get(i).getEmpresa_id() == 1) {
+                System.out.println("PitsTop");
+            } else {
+                System.out.println("outras");
+            }
+        }
         dispose();
         CaixaDeStatus caixaDeStatus = new CaixaDeStatus(janelaPrinci, rootPaneCheckingEnabled);
         caixaDeStatus.setVisible(true);
-    
     }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked
 
     public static void main(String args[]) {

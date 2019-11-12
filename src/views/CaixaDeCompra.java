@@ -30,6 +30,8 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel6AdicionarCarrinhoIcon = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel2Preço1 = new javax.swing.JLabel();
+        jLabel3Empresa = new javax.swing.JLabel();
+        jLabel3IdProduto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -74,8 +76,8 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2Igredientes.setToolTipText("");
         jLabel2Igredientes.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel2Igredientes.setAutoscrolls(true);
-        jLabel2Igredientes.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true), "Igredientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(102, 102, 102))); // NOI18N
-        jPanel1.add(jLabel2Igredientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 220, 160));
+        jLabel2Igredientes.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(168, 62, 18), 1, true), "Igredientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18), new java.awt.Color(227, 50, 12))); // NOI18N
+        jPanel1.add(jLabel2Igredientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 220, 80));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ok.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 325, -1, -1));
@@ -108,6 +110,14 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2Preço1.setText("R$");
         jPanel1.add(jLabel2Preço1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
+        jLabel3Empresa.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        jLabel3Empresa.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jLabel3Empresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, -1, -1));
+
+        jLabel3IdProduto.setFont(new java.awt.Font("Dialog", 0, 8)); // NOI18N
+        jLabel3IdProduto.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jLabel3IdProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 412));
 
         pack();
@@ -119,7 +129,10 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     }//GEN-LAST:event_jLabel1FecharCaixaCompraMouseClicked
 
     private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
-        JanelaPrinci.produtos.add(new Produto(jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()), "kkkkkkk", 1));
+        //adicionando produtos ao array de produtos
+        JanelaPrinci.produtos.add(new Produto(jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()),jLabel2Igredientes.getText(), Integer.valueOf(jLabel3Empresa.getText())));
+        
+        //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {
             ProdutosPitstop.qtdcarrinho();
         }
@@ -164,6 +177,8 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     public javax.swing.JLabel jLabel2Igredientes;
     public javax.swing.JLabel jLabel2Preço;
     public javax.swing.JLabel jLabel2Preço1;
+    public javax.swing.JLabel jLabel3Empresa;
+    public javax.swing.JLabel jLabel3IdProduto;
     public javax.swing.JLabel jLabel3NomeProduto;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5AdicionarCarrinho;
