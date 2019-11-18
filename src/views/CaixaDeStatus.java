@@ -19,7 +19,6 @@ public class CaixaDeStatus extends javax.swing.JDialog {
             pedidoStatus.add(new PedidoStatus(1, JanelaPrinci.produtos.indexOf(p), "00/00/0000", 1));
         });
         if (pedidoStatus.size() > 0) {
-            System.out.println("tou entrando");
             addnewProduto();
             if (pedidoStatus.size() > 2) {
                 jPanel3aumen.setPreferredSize(new Dimension(678, 550));
@@ -67,7 +66,7 @@ public class CaixaDeStatus extends javax.swing.JDialog {
 
         jScrollPane1Lista.setViewportView(jPanel3aumen);
 
-        getContentPane().add(jScrollPane1Lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 3, 700, 410));
+        getContentPane().add(jScrollPane1Lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, -7, 710, 420));
 
         pack();
         setLocationRelativeTo(null);

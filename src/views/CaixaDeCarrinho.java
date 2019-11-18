@@ -2,6 +2,7 @@ package views;
 
 import Dao.ConnectDao;
 import Dao.PedidosDao;
+import Dao.UserDao;
 import entites.Produto;
 import java.awt.Dimension;
 import java.sql.Connection;
@@ -205,41 +206,10 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
 
+    //salvando pedidos
     private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
-        Connection conn = ConnectDao.getConnection();
-        String sql = "SELECT * FROM usuario WHERE  nome = '" + TelaDeLogin.jTextField1User.getText() + "' AND senha = '" + TelaDeLogin.jTextField2Senha.getText() + "'";
-        System.out.println(TelaDeLogin.jTextField1User.getText());
-        System.out.println(TelaDeLogin.jTextField2Senha.getText());
-        ResultSet res;
-        Statement statement;
-        int id = 0;
-        try {
-            statement = conn.createStatement();
-            res = statement.executeQuery(sql);
-            if (res.next()) {
-                id = res.getInt("id");
-                System.out.println(res.getInt("id"));
-            }else{
-                System.out.println("nenum resultado");
-            }
-            ConnectDao.closeConnection(conn);
-            ConnectDao.closeConnectionStatement(statement);
-            ConnectDao.closeConnectionPrepare(res);
-
-        } catch (SQLException ex) {
-            Logger.getLogger(CaixaDeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
         for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
-
-            PedidosDao.salvarPedido(id, JanelaPrinci.produtos.get(i).getEmpresa_id());
-            
-            System.out.println(JanelaPrinci.produtos.get(i).toString());
-            if (JanelaPrinci.produtos.get(i).getEmpresa_id() == 1) {
-                System.out.println("PitsTop");
-            } else {
-                System.out.println("outras");
-            }
+            PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()), JanelaPrinci.produtos.get(i).getEmpresa_id());
         }
         dispose();
         CaixaDeStatus caixaDeStatus = new CaixaDeStatus(janelaPrinci, rootPaneCheckingEnabled);

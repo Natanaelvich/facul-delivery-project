@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import views.CaixaDeCarrinho;
+import views.TelaDeLogin;
 
 public class UserDao {
 
@@ -73,5 +75,33 @@ public class UserDao {
         }
         return resultado;
 
+    }
+    
+    //buscando id do usuario
+    
+    public static int getUserID(String user,String senha){
+        Connection conn = ConnectDao.getConnection();
+      
+       String sql = "SELECT * FROM usuario WHERE  nome = '" + user + "' AND senha = '" + senha+ "'";
+         ResultSet res;
+        Statement statement;
+        int id = 0;
+        try {
+            statement = conn.createStatement();
+            res = statement.executeQuery(sql);
+            if (res.next()) {
+                id = res.getInt("id");
+                System.out.println(res.getInt("id"));
+            }else{
+                System.out.println("nenum resultado");
+            }
+            ConnectDao.closeConnection(conn);
+            ConnectDao.closeConnectionStatement(statement);
+            ConnectDao.closeConnectionPrepare(res);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(CaixaDeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
     }
 }
