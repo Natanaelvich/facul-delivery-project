@@ -1,5 +1,7 @@
 package views;
 
+import Dao.PedidosDao;
+import Dao.UserDao;
 import entites.Produto;
 
 public class CaixaDeCompra extends javax.swing.JDialog {
@@ -86,6 +88,11 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Confirmar Pedido");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
 
         jLabel5AdicionarCarrinho.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -140,10 +147,14 @@ public class CaixaDeCompra extends javax.swing.JDialog {
         if (ProdutosPontes.ativo) {
             ProdutosPontes.qtdcarrinho();
         }
-
-        JanelaPrinci.jLabel9QuantiCarrinho.setText("kkk");
         dispose();
     }//GEN-LAST:event_jLabel5AdicionarCarrinhoMouseClicked
+
+    //confimando pedido
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+      PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()),Integer.valueOf(jLabel3Empresa.getText()));
+      dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     public static void main(String args[]) {
         try {

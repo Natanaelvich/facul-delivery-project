@@ -9,7 +9,6 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import views.CaixaDeCarrinho;
-import views.TelaDeLogin;
 
 public class UserDao {
 
@@ -33,6 +32,7 @@ public class UserDao {
         }
 
     }
+
     //metodo para buscar user
     public static boolean getUser(Usuario user) {
         conn = ConnectDao.getConnection();
@@ -44,10 +44,9 @@ public class UserDao {
             res = statement.executeQuery(sql);
             resultado = res.next();
             ConnectDao.closeConnection(conn);
-            ConnectDao.closeConnectionStatement(statement); 
+            ConnectDao.closeConnectionStatement(statement);
             ConnectDao.closeConnectionPrepare(res);
-          
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -55,12 +54,12 @@ public class UserDao {
         return resultado;
 
     }
-    
+
     //verificação para login
     public static boolean getUserAndSenha(String user, String senha) {
         conn = ConnectDao.getConnection();
         String sql = "SELECT * FROM usuario WHERE  nome = '" + user + "' AND senha = '" + senha + "'";
-        ResultSet res ;
+        ResultSet res;
         boolean resultado = false;
         try {
             Statement statement = conn.createStatement();
@@ -69,21 +68,20 @@ public class UserDao {
             ConnectDao.closeConnection(conn);
             ConnectDao.closeConnectionStatement(statement);
             ConnectDao.closeConnectionPrepare(res);
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return resultado;
 
     }
-    
+
     //buscando id do usuario
-    
-    public static int getUserID(String user,String senha){
-        Connection conn = ConnectDao.getConnection();
-      
-       String sql = "SELECT * FROM usuario WHERE  nome = '" + user + "' AND senha = '" + senha+ "'";
-         ResultSet res;
+    public static int getUserID(String user, String senha) {
+        conn = ConnectDao.getConnection();
+
+        String sql = "SELECT * FROM usuario WHERE  nome = '" + user + "' AND senha = '" + senha + "'";
+        ResultSet res;
         Statement statement;
         int id = 0;
         try {
@@ -92,7 +90,7 @@ public class UserDao {
             if (res.next()) {
                 id = res.getInt("id");
                 System.out.println(res.getInt("id"));
-            }else{
+            } else {
                 System.out.println("nenum resultado");
             }
             ConnectDao.closeConnection(conn);

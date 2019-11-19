@@ -1,7 +1,6 @@
 package Dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,9 +9,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import views.TabelaDePedidos;
+import views.TelaDeLogin;
 
 public class PedidosDao {
 
+    //salvando pedido no banco
     public static void salvarPedido(int id_user, int id_produto) {
         Connection conn = ConnectDao.getConnection();
 
@@ -40,14 +41,13 @@ public class PedidosDao {
             Connection conn =  ConnectDao.getConnection();
             
             Statement statement = conn.createStatement();
-            ResultSet res = statement.executeQuery("SELECT * FROM pedidos");
+            ResultSet res = statement.executeQuery("select usuario.nome,produto.descricao , produto.preco , empresa.nome from pedido , usuario , produto, empresa where pedido.id_usuario= usuario.id AND empresa.nome = "+UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()));
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidos.jTable1DadosPedidos.getModel();
              dtm.setNumRows(0);
             while(res.next()){           
                 dtm.addRow(new Object[]{
-                  res.getInt("descricao"),
-                  res.getString("nome"),
-                  res.getString("telefone"),
+                  res.getString("descricao"),
+                  res.getInt("preco"),
                   res.getInt("endereco_id")
                 
             });

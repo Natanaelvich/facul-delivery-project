@@ -1,16 +1,9 @@
 package views;
 
-import Dao.ConnectDao;
 import Dao.PedidosDao;
 import Dao.UserDao;
 import entites.Produto;
 import java.awt.Dimension;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -147,7 +140,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public void addnewProduto() {
+    private void addnewProduto() {
         int posiYP = 30;
         for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
 
