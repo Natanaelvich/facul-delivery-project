@@ -17,12 +17,13 @@ public class PedidosDao {
     public static void salvarPedido(int id_user, int id_produto) {
         Connection conn = ConnectDao.getConnection();
 
-        String sql = "INSERT INTO pedido (id_usuario,id_produto,created_at) VALUES (?,?,?)";
+        String sql = "INSERT INTO pedido (id_usuario,id_produto,created_at,status) VALUES (?,?,?,?)";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, id_user);
             preparedStatement.setInt(2, id_produto);
             preparedStatement.setTimestamp(3, new java.sql.Timestamp(java.util.Calendar.getInstance().getTimeInMillis()));
+            preparedStatement.setString(4, "Pendente");
             preparedStatement.execute();
 
             ConnectDao.closeConnection(conn);

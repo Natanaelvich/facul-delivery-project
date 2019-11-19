@@ -184,18 +184,39 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
 
     }
     private void jLabel1FecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1FecharMouseClicked
+         //verificando se as janelas de produtos estao ativas
+        if (ProdutosPitstop.ativo) {
+            ProdutosPitstop.qtdcarrinho();
+        }
         ProdutosPitstop.qtdcarrinho();
+        if (ProdutosPontes.ativo) {
+            ProdutosPontes.qtdcarrinho();
+        }
         dispose();
     }//GEN-LAST:event_jLabel1FecharMouseClicked
 
     private void jLabel1Fechar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1Fechar1MouseClicked
+         //verificando se as janelas de produtos estao ativas
+        if (ProdutosPitstop.ativo) {
+            ProdutosPitstop.qtdcarrinho();
+        }
         ProdutosPitstop.qtdcarrinho();
+        if (ProdutosPontes.ativo) {
+            ProdutosPontes.qtdcarrinho();
+        }
         dispose();
     }//GEN-LAST:event_jLabel1Fechar1MouseClicked
 
     private void jLabel2CanceTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2CanceTEXTMouseClicked
         JanelaPrinci.produtos.clear();
+         //verificando se as janelas de produtos estao ativas
+        if (ProdutosPitstop.ativo) {
+            ProdutosPitstop.qtdcarrinho();
+        }
         ProdutosPitstop.qtdcarrinho();
+        if (ProdutosPontes.ativo) {
+            ProdutosPontes.qtdcarrinho();
+        }
         dispose();
     }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
 
