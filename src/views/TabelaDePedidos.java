@@ -1,9 +1,12 @@
 package views;
 
+import Dao.PedidosDao;
+
 public class TabelaDePedidos extends javax.swing.JFrame {
 
     public TabelaDePedidos() {
         initComponents();
+        PedidosDao.addRowsTable();
     }
 
     @SuppressWarnings("unchecked")
@@ -34,12 +37,12 @@ public class TabelaDePedidos extends javax.swing.JFrame {
                 "Pedido", "Preço", "Data", "Status"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jTable1DadosPedidos.setGridColor(new java.awt.Color(102, 102, 102));
@@ -60,7 +63,7 @@ public class TabelaDePedidos extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel1Fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 410));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
 
         pack();
         setLocationRelativeTo(null);

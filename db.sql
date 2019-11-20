@@ -54,15 +54,18 @@ SELECT * FROM usuario WHERE  nome = 'natan' AND senha = '12345';
 select * from usuario;
 select * from produto;
 select * from empresa;
-select * from pedido;
+select * from pedido; 
 
 select produto.descricao , produto.preco , empresa.nome from produto , empresa where produto.empresa_id = empresa.id;
 
 select usuario.nome,produto.descricao , produto.preco , empresa.nome from pedido , usuario , produto, empresa where pedido.id_usuario= usuario.id AND empresa.nome = 'pontes';
 
-SELECT usuario.nome, pedido.created_at
-FROM pedido as usuario
-JOIN pedido as usuario
-on usuario.id = 4
+SELECT u.id,pr.descricao, pr.preco, pe.created_at, pe.status from pedido pe
+join usuario u
+on u.id = pe.id_usuario
+join produto pr
+on pr.id = pe.id_produto
+where u.id = 4;
+
 
 

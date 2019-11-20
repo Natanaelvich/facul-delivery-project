@@ -36,21 +36,25 @@ public class PedidosDao {
 
     //add dados da table de pedidos
     public static void  addRowsTable() {
-
-
         try {
             Connection conn =  ConnectDao.getConnection();
             
             Statement statement = conn.createStatement();
-            ResultSet res = statement.executeQuery("select usuario.nome,produto.descricao , produto.preco , empresa.nome from pedido , usuario , produto, empresa where pedido.id_usuario= usuario.id AND empresa.nome = "+UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()));
+            ResultSet res = statement.executeQuery("SELECT pr.descricao, pr.preco,"
+                                                    + " pe.created_at, pe.status "
+                                                    + "from pedido pe\n" +
+                                                    "join usuario u\n" +
+                                                    "on u.id = pe.id_usuario\n" +
+                                                    "join produto pr\n" +
+                                                    "on pr.id = pe.id_produto where u.id = 4;");
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidos.jTable1DadosPedidos.getModel();
-             dtm.setNumRows(0);
+            dtm.setNumRows(0);
             while(res.next()){           
                 dtm.addRow(new Object[]{
                   res.getString("descricao"),
-                  res.getInt("preco"),
-                  res.getInt("endereco_id")
-                
+                  res.getDouble("preco"),
+                  res.getString("created_at"),
+                  res.getString("status")
             });
             }
         } catch (SQLException ex) {

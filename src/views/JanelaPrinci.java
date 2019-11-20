@@ -35,10 +35,11 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel7Iconlogo = new javax.swing.JLabel();
         jPanel1Lateral = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel6MenuDeslizar = new javax.swing.JLabel();
         jLabel21User = new javax.swing.JLabel();
         jLabel22Deslogar = new javax.swing.JLabel();
         jLabel7inicio = new javax.swing.JLabel();
+        jLabel7pedidos = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -109,14 +110,16 @@ public class JanelaPrinci extends javax.swing.JFrame {
         jPanel1Lateral.setPreferredSize(new java.awt.Dimension(290, 555));
         jPanel1Lateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Menu_32px.png"))); // NOI18N
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel6MenuDeslizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_Menu_32px.png"))); // NOI18N
+        jLabel6MenuDeslizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6MenuDeslizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel6MenuDeslizar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jLabel6MenuDeslizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                jLabel6MenuDeslizarMouseClicked(evt);
             }
         });
-        jPanel1Lateral.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel1Lateral.add(jLabel6MenuDeslizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jLabel21User.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/icons8_customer_32px_1.png"))); // NOI18N
         jLabel21User.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -138,6 +141,15 @@ public class JanelaPrinci extends javax.swing.JFrame {
             }
         });
         jPanel1Lateral.add(jLabel7inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 23, -1, -1));
+
+        jLabel7pedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/escolhas.png"))); // NOI18N
+        jLabel7pedidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7pedidos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7pedidosMouseClicked(evt);
+            }
+        });
+        jPanel1Lateral.add(jLabel7pedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 23, -1, -1));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -324,7 +336,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
             jLabel9QuantiCarrinho.setText("0");
         }
     }
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void jLabel6MenuDeslizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MenuDeslizarMouseClicked
         AnimationClass animatioOPT = new AnimationClass();
 
         animatioOPT.jLabelXLeft(300, 70, 5, 5, jLabel21User);
@@ -335,7 +347,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         animatioOPT.jLabelXLeft(400, 150, 5, 5, jLabel7inicio);
         animatioOPT.jLabelXRight(150, 400, 5, 5, jLabel7inicio);
-    }//GEN-LAST:event_jLabel6MouseClicked
+        
+        animatioOPT.jLabelXLeft(450, 190, 5, 5, jLabel7pedidos);
+        animatioOPT.jLabelXRight(190, 450, 5, 5, jLabel7pedidos);
+    }//GEN-LAST:event_jLabel6MenuDeslizarMouseClicked
 
     private void jLabel21FecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21FecharMouseClicked
         int dialog = JOptionPane.YES_NO_OPTION;
@@ -409,6 +424,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jPanel4MouseClicked
 
+    private void jLabel7pedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7pedidosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7pedidosMouseClicked
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -448,10 +467,11 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35_6;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel6MenuDeslizar;
     private javax.swing.JLabel jLabel7Iconlogo;
     private javax.swing.JLabel jLabel7NomeEmpresa;
     private javax.swing.JLabel jLabel7inicio;
+    private javax.swing.JLabel jLabel7pedidos;
     private javax.swing.JLabel jLabel8;
     public static transient javax.swing.JLabel jLabel9QuantiCarrinho;
     private javax.swing.JPanel jPanel1Lateral;
