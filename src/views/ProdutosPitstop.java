@@ -489,7 +489,6 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseDragged
 
     private void jLabel8PizzaMexicanaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseMoved
-        // TODO add your handling code here:
         jLabel8PizzaMexicana.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(153, 153, 153)));
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseMoved
 

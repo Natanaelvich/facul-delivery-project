@@ -223,7 +223,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     //salvando pedidos
     private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
         for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
-            PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()), JanelaPrinci.produtos.get(i).getEmpresa_id());
+            PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()), JanelaPrinci.produtos.get(i).getId());
         }
         dispose();
     }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked

@@ -424,11 +424,12 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jPanel4MouseClicked
 
+    //mostrar pedidos realizados
     private void jLabel7pedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7pedidosMouseClicked
-
         TabelaDePedidosEStatus tdpes = new TabelaDePedidosEStatus();
         jPanelSlider2.add(tdpes);
         jPanelSlider2.nextPanel(10, tdpes, rootPaneCheckingEnabled);
+        jLabel7NomeEmpresa.setText("Pedidos");
     }//GEN-LAST:event_jLabel7pedidosMouseClicked
 
     public static void main(String args[]) {

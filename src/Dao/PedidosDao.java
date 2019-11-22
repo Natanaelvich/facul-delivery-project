@@ -45,7 +45,8 @@ public class PedidosDao {
                                                     "join usuario u\n" +
                                                     "on u.id = pe.id_usuario\n" +
                                                     "join produto pr\n" +
-                                                    "on pr.id = pe.id_produto where u.id = 4;");
+                                                    "on pr.id = pe.id_produto where u.id = 4"
+                                                    + " order by pe.created_at;");
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidosEStatus.jTable1DadosPedidos.getModel();
             dtm.setNumRows(0);
             while(res.next()){           

@@ -137,8 +137,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
 
     private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
         //adicionando produtos ao array de produtos
-        JanelaPrinci.produtos.add(new Produto(jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()),jLabel2Igredientes.getText(), Integer.valueOf(jLabel3Empresa.getText())));
-        
+        JanelaPrinci.produtos.add(new Produto(Integer.valueOf(jLabel3IdProduto.getText()),jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()),jLabel2Igredientes.getText(), Integer.valueOf(jLabel3Empresa.getText())));
         //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {
             ProdutosPitstop.qtdcarrinho();
@@ -148,11 +147,15 @@ public class CaixaDeCompra extends javax.swing.JDialog {
             ProdutosPontes.qtdcarrinho();
         }
         dispose();
+        
+        System.out.println(jLabel3IdProduto.getText());
+        System.out.println(jLabel3Empresa.getText());
+        System.out.println(jLabel3NomeProduto.getText());
     }//GEN-LAST:event_jLabel5AdicionarCarrinhoMouseClicked
 
     //confimando pedido
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-      PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()),Integer.valueOf(jLabel3Empresa.getText()));
+      PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()),Integer.valueOf(jLabel3IdProduto.getText()));
       dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 

@@ -371,22 +371,21 @@ public  class ProdutosPontes extends javax.swing.JPanel {
         caixaDeCompra.jLabel2Preço.setText(preco);
         caixaDeCompra.jLabel2Igredientes.setText(ingredientes);
         caixaDeCompra.jLabel3Empresa.setText(String.valueOf(id_empresa));
-         caixaDeCompra.jLabel3IdProduto.setText(String.valueOf(id_produto));
-
+        caixaDeCompra.jLabel3IdProduto.setText(String.valueOf(id_produto));
         caixaDeCompra.setVisible(true);
     }
     private void jLabel8PizzaMexicanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8PizzaMexicanaMouseClicked
-        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "agua,feijao,arroz", "89.99",2,2);
+        mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "agua,feijao,arroz", "89.99",2,8);
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
     private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
-        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "kkkkkkkkkkkk", "49.99",2,3);
+        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "kkkkkkkkkkkk", "49.99",2,9);
     }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
     private void jLabel10MuçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MuçaMouseClicked
-        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "kkkkkkkkkkkk", "45.99",2,4);
+        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "kkkkkkkkkkkk", "45.99",2,10);
     }//GEN-LAST:event_jLabel10MuçaMouseClicked
 
     private void jLabel11FrangoCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseClicked
-        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "kkkkkkkkkkkk", "24.99",2,5);
+        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "kkkkkkkkkkkk", "24.99",2,11);
     }//GEN-LAST:event_jLabel11FrangoCapMouseClicked
 
     private void jLabel7CarrinhoTelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7CarrinhoTelaInicialMouseClicked
