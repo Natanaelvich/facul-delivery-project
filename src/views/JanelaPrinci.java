@@ -425,7 +425,10 @@ public class JanelaPrinci extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jLabel7pedidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7pedidosMouseClicked
-        // TODO add your handling code here:
+
+        TabelaDePedidosEStatus tdpes = new TabelaDePedidosEStatus();
+        jPanelSlider2.add(tdpes);
+        jPanelSlider2.nextPanel(10, tdpes, rootPaneCheckingEnabled);
     }//GEN-LAST:event_jLabel7pedidosMouseClicked
 
     public static void main(String args[]) {

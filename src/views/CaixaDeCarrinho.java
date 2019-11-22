@@ -226,8 +226,6 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
             PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()), JanelaPrinci.produtos.get(i).getEmpresa_id());
         }
         dispose();
-        CaixaDeStatus caixaDeStatus = new CaixaDeStatus(janelaPrinci, rootPaneCheckingEnabled);
-        caixaDeStatus.setVisible(true);
     }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked
 
     public static void main(String args[]) {

@@ -13,6 +13,8 @@ public class TelaDeUsuario extends javax.swing.JPanel {
         jPanel1UserTela = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jPanel1UserTela.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1UserTela.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -21,16 +23,7 @@ public class TelaDeUsuario extends javax.swing.JPanel {
         jLabel1.setText("USER");
         jPanel1UserTela.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1UserTela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1UserTela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        add(jPanel1UserTela, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 610));
     }// </editor-fold>//GEN-END:initComponents
 
 

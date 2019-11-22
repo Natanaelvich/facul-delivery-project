@@ -8,8 +8,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-import views.TabelaDePedidos;
-import views.TelaDeLogin;
+import views.TabelaDePedidosEStatus;
 
 public class PedidosDao {
 
@@ -47,7 +46,7 @@ public class PedidosDao {
                                                     "on u.id = pe.id_usuario\n" +
                                                     "join produto pr\n" +
                                                     "on pr.id = pe.id_produto where u.id = 4;");
-            DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidos.jTable1DadosPedidos.getModel();
+            DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidosEStatus.jTable1DadosPedidos.getModel();
             dtm.setNumRows(0);
             while(res.next()){           
                 dtm.addRow(new Object[]{
