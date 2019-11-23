@@ -42,15 +42,15 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jSeparator10 = new javax.swing.JSeparator();
         jLabel15nomePortuguesa = new javax.swing.JLabel();
         jLabel16NomeMuça = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        jLabel17CoxinhaCopoNome = new javax.swing.JLabel();
         jLabel18NapoliNome = new javax.swing.JLabel();
         jLabel43FranCatuNome = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        jLabel25CoxinhaDeFrangoNome = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jSeparator11 = new javax.swing.JSeparator();
         jSeparator12 = new javax.swing.JSeparator();
-        jLabel33 = new javax.swing.JLabel();
+        jLabel33PastelNome = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
@@ -173,6 +173,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel24CoxinhaFran.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel24CoxinhaFranMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel24CoxinhaFranMouseExited(evt);
             }
@@ -188,6 +191,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel26Pastel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26PastelMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel26PastelMouseExited(evt);
             }
@@ -203,6 +209,9 @@ public class ProdutosPitstop extends javax.swing.JPanel {
             }
         });
         jLabel32CoxinhaCopo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel32CoxinhaCopoMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel32CoxinhaCopoMouseExited(evt);
             }
@@ -286,10 +295,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel16NomeMuça.setText("Muçarela");
         jPanel1.add(jLabel16NomeMuça, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("Coxinha de copo");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 870, -1, -1));
+        jLabel17CoxinhaCopoNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17CoxinhaCopoNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel17CoxinhaCopoNome.setText("Coxinha de copo");
+        jPanel1.add(jLabel17CoxinhaCopoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 870, -1, -1));
 
         jLabel18NapoliNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel18NapoliNome.setForeground(new java.awt.Color(102, 102, 102));
@@ -301,10 +310,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jLabel43FranCatuNome.setText("Frango com catupiry");
         jPanel1.add(jLabel43FranCatuNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel25.setText("Coxinha de Frango");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 860, -1, -1));
+        jLabel25CoxinhaDeFrangoNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel25CoxinhaDeFrangoNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel25CoxinhaDeFrangoNome.setText("Coxinha de Frango");
+        jPanel1.add(jLabel25CoxinhaDeFrangoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 860, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(102, 102, 102));
@@ -322,10 +331,10 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         jSeparator12.setForeground(new java.awt.Color(153, 153, 153));
         jPanel1.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 910, 510, 10));
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel33.setText("Pastel");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 860, -1, -1));
+        jLabel33PastelNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel33PastelNome.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel33PastelNome.setText("Pastel");
+        jPanel1.add(jLabel33PastelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 860, -1, -1));
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(102, 102, 102));
@@ -533,6 +542,18 @@ public class ProdutosPitstop extends javax.swing.JPanel {
         caixaDeCarrinho.setVisible(true);
     }//GEN-LAST:event_jLabel7CarrinhoTelaInicialMouseClicked
 
+    private void jLabel24CoxinhaFranMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24CoxinhaFranMouseClicked
+        mostrarCaixa(jLabel24CoxinhaFran, jLabel25CoxinhaDeFrangoNome, "frango,Massa", "1.99",1,14);
+    }//GEN-LAST:event_jLabel24CoxinhaFranMouseClicked
+
+    private void jLabel26PastelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26PastelMouseClicked
+        mostrarCaixa(jLabel26Pastel, jLabel33PastelNome, "Massa,Recheio", "3.99",1,15);
+    }//GEN-LAST:event_jLabel26PastelMouseClicked
+
+    private void jLabel32CoxinhaCopoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel32CoxinhaCopoMouseClicked
+        mostrarCaixa(jLabel32CoxinhaCopo, jLabel17CoxinhaCopoNome, "Massa,Recheio", "4.99",1,16);
+    }//GEN-LAST:event_jLabel32CoxinhaCopoMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel10Muça;
@@ -541,14 +562,14 @@ public class ProdutosPitstop extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel13RJNome;
     private javax.swing.JLabel jLabel15nomePortuguesa;
     private javax.swing.JLabel jLabel16NomeMuça;
-    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel17CoxinhaCopoNome;
     private javax.swing.JLabel jLabel18NapoliNome;
     private javax.swing.JLabel jLabel24CoxinhaFran;
-    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel25CoxinhaDeFrangoNome;
     private javax.swing.JLabel jLabel26Pastel;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32CoxinhaCopo;
-    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel33PastelNome;
     private javax.swing.JLabel jLabel34Agua;
     private javax.swing.JLabel jLabel36Suco;
     private javax.swing.JLabel jLabel38Refri;

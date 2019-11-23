@@ -31,11 +31,11 @@ public class TabelaDePedidosEStatus extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Pedido", "Preço", "Data", "Status"
+                "Pedido", "Preço", "Data", "Status", "Estabelecimento"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -47,7 +47,7 @@ public class TabelaDePedidosEStatus extends javax.swing.JPanel {
         jTable1DadosPedidos.setSelectionForeground(new java.awt.Color(51, 51, 51));
         jScrollPane1.setViewportView(jTable1DadosPedidos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 640, 430));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 560));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 610));
     }// </editor-fold>//GEN-END:initComponents

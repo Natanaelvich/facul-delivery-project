@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import views.TabelaDePedidosEStatus;
+import views.TelaDeLogin;
 
 public class PedidosDao {
 
@@ -37,15 +38,18 @@ public class PedidosDao {
     public static void  addRowsTable() {
         try {
             Connection conn =  ConnectDao.getConnection();
-            
+            int idUSER = UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText());
             Statement statement = conn.createStatement();
             ResultSet res = statement.executeQuery("SELECT pr.descricao, pr.preco,"
-                                                    + " pe.created_at, pe.status "
-                                                    + "from pedido pe\n" +
-                                                    "join usuario u\n" +
-                                                    "on u.id = pe.id_usuario\n" +
-                                                    "join produto pr\n" +
-                                                    "on pr.id = pe.id_produto where u.id = 4"
+                                                    + " pe.created_at, pe.status, "
+                                                    + " em.nome  from pedido pe" +
+                                                    " join usuario u" +
+                                                    " on u.id = pe.id_usuario" +
+                                                    " join produto pr" +
+                                                    " on pr.id = pe.id_produto "
+                                                    + " join empresa em" +
+                                                    " on em.id = pr.empresa_id "
+                                                    + " where u.id = "+idUSER
                                                     + " order by pe.created_at;");
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidosEStatus.jTable1DadosPedidos.getModel();
             dtm.setNumRows(0);
@@ -54,7 +58,8 @@ public class PedidosDao {
                   res.getString("descricao"),
                   res.getDouble("preco"),
                   res.getString("created_at"),
-                  res.getString("status")
+                  res.getString("status"),
+                  res.getString("nome")
             });
             }
         } catch (SQLException ex) {

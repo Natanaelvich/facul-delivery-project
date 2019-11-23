@@ -378,14 +378,14 @@ public  class ProdutosPontes extends javax.swing.JPanel {
         mostrarCaixa(jLabel8PizzaMexicana, jLabel48NomeMexicana, "agua,feijao,arroz", "89.99",2,8);
     }//GEN-LAST:event_jLabel8PizzaMexicanaMouseClicked
     private void jLabel9PortuguesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9PortuguesaMouseClicked
-        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "kkkkkkkkkkkk", "49.99",2,9);
+        mostrarCaixa(jLabel9Portuguesa, jLabel15nomePortuguesa, "agua,feijao,arroz", "49.99",2,9);
     }//GEN-LAST:event_jLabel9PortuguesaMouseClicked
     private void jLabel10MuçaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MuçaMouseClicked
-        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "kkkkkkkkkkkk", "45.99",2,10);
+        mostrarCaixa(jLabel10Muça, jLabel16NomeMuça, "agua,feijao,arroz", "45.99",2,10);
     }//GEN-LAST:event_jLabel10MuçaMouseClicked
 
     private void jLabel11FrangoCapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11FrangoCapMouseClicked
-        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "kkkkkkkkkkkk", "24.99",2,11);
+        mostrarCaixa(jLabel11FrangoCap, jLabel43FranCatuNome, "agua,feijao,arroz", "24.99",2,11);
     }//GEN-LAST:event_jLabel11FrangoCapMouseClicked
 
     private void jLabel7CarrinhoTelaInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7CarrinhoTelaInicialMouseClicked
