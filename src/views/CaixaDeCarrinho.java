@@ -15,46 +15,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.jScrollPane1Lista.getVerticalScrollBar().setUnitIncrement(15);
-        
-        //exibindo o total a pagar
-        if(totalApagar()>0){
-           String total = String.format("%.2f", totalApagar());
-           jLabel2Total.setText(total); 
-        }
-    
-        if (JanelaPrinci.produtos.size() > 0) {
-            jPanel1Vazio.setVisible(false);
-            addnewProduto();
-            if (JanelaPrinci.produtos.size() > 2) {
-                jPanel3aumen.setPreferredSize(new Dimension(678, 580));
-                jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
-                jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 525, -1, -1));
-                jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 530, -1, -1));
-                jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 525, -1, -1));
-                jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, -1, -1));
-                jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, -1, -1));
-                if (JanelaPrinci.produtos.size() > 3) {
-                    jPanel3aumen.setPreferredSize(new Dimension(678, 780));
-                    jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 730, -1, -1));
-                    jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 725, -1, -1));
-                    jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 730, -1, -1));
-                    jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 725, -1, -1));
-                    jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, -1, -1));
-                    jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, -1, -1));
-                    if (JanelaPrinci.produtos.size() > 4) {
-                        jPanel3aumen.setPreferredSize(new Dimension(678, 930));
-                        jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 880, -1, -1));
-                        jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 875, -1, -1));
-                        jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 880, -1, -1));
-                        jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 875, -1, -1));
-                        jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 850, -1, -1));
-                        jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 850, -1, -1));
-                    }
-                }
-            }
-        } else {
-            jPanel1Vazio.setVisible(true);
-        }
+        posiComponentesCarrinho();
     }
 
     @SuppressWarnings("unchecked")
@@ -163,6 +124,7 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //adicionando produto ao carrinho e exibindo
     private void addnewProduto() {
         int posiYP = 30;
         for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
@@ -227,6 +189,49 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jLabel1FecharMouseClicked
 
+    //posicionamento de compoenetes dentro do carrinho
+    private void posiComponentesCarrinho(){
+            //exibindo o total a pagar
+        if(totalApagar()>0){
+           String total = String.format("%.2f", totalApagar());
+           jLabel2Total.setText(total); 
+        }
+    
+        if (JanelaPrinci.produtos.size() > 0) {
+            jPanel1Vazio.setVisible(false);
+            addnewProduto();
+            if (JanelaPrinci.produtos.size() > 2) {
+                jPanel3aumen.setPreferredSize(new Dimension(678, 580));
+                jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+                jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 525, -1, -1));
+                jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 530, -1, -1));
+                jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 525, -1, -1));
+                jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, -1, -1));
+                jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, -1, -1));
+                if (JanelaPrinci.produtos.size() > 3) {
+                    jPanel3aumen.setPreferredSize(new Dimension(678, 780));
+                    jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 730, -1, -1));
+                    jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 725, -1, -1));
+                    jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 730, -1, -1));
+                    jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 725, -1, -1));
+                    jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, -1, -1));
+                    jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, -1, -1));
+                    if (JanelaPrinci.produtos.size() > 4) {
+                        jPanel3aumen.setPreferredSize(new Dimension(678, 930));
+                        jPanel3aumen.add(jLabel2ConfirTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 880, -1, -1));
+                        jPanel3aumen.add(jLabel4confirICON, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 875, -1, -1));
+                        jPanel3aumen.add(jLabel2CanceTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 880, -1, -1));
+                        jPanel3aumen.add(jLabel4CanceIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 875, -1, -1));
+                        jPanel3aumen.add(jLabel1TotalTEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 850, -1, -1));
+                        jPanel3aumen.add(jLabel2Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 850, -1, -1));
+                    }
+                }
+            }
+        } else {
+            jPanel1Vazio.setVisible(true);
+        }
+    }
+    //fechar janela de carrinho
     private void jLabel1Fechar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1Fechar1MouseClicked
          //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {

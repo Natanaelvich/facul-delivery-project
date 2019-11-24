@@ -1,6 +1,5 @@
 package views;
 
-import com.sun.org.apache.bcel.internal.Constants;
 import java.awt.Color;
 import javax.swing.JLabel;
 
