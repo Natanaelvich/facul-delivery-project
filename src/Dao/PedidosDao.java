@@ -14,16 +14,17 @@ import views.TelaDeLogin;
 public class PedidosDao {
 
     //salvando pedido no banco
-    public static void salvarPedido(int id_user, int id_produto) {
+    public static void salvarPedido(int id_user, int id_produto, int optPag) {
         Connection conn = ConnectDao.getConnection();
 
-        String sql = "INSERT INTO pedido (id_usuario,id_produto,created_at,status) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO pedido (id_usuario,id_produto,created_at,status,forma_pagamento_id) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setInt(1, id_user);
             preparedStatement.setInt(2, id_produto);
             preparedStatement.setTimestamp(3, new java.sql.Timestamp(java.util.Calendar.getInstance().getTimeInMillis()));
             preparedStatement.setString(4, "Pendente");
+            preparedStatement.setInt(5, optPag);
             preparedStatement.execute();
 
             ConnectDao.closeConnection(conn);

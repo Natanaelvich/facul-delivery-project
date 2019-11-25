@@ -6,6 +6,7 @@ import entites.Produto;
 import java.awt.Dimension;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import views.estabelecimentos.ProdutosPitstop;
 
 public class CaixaDeCarrinho extends javax.swing.JDialog {
 
@@ -245,6 +246,11 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     }//GEN-LAST:event_jLabel1Fechar1MouseClicked
 
     private void jLabel2CanceTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2CanceTEXTMouseClicked
+        limparCarrinho();
+        dispose();
+    }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
+
+    public static void limparCarrinho(){
         JanelaPrinci.produtos.clear();
          //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {
@@ -254,14 +260,11 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
         if (ProdutosPontes.ativo) {
             ProdutosPontes.qtdcarrinho();
         }
-        dispose();
-    }//GEN-LAST:event_jLabel2CanceTEXTMouseClicked
-
+    }
     //salvando pedidos
     private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
-        for (int i = 0; i < JanelaPrinci.produtos.size(); i++) {
-            PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()), JanelaPrinci.produtos.get(i).getId());
-        }
+        CaixaDeFormaDePagamento cdfdp = new CaixaDeFormaDePagamento(janelaPrinci, rootPaneCheckingEnabled);
+        cdfdp.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked
 

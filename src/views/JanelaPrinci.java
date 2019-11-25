@@ -1,5 +1,6 @@
 package views;
 
+import views.estabelecimentos.ProdutosPitstop;
 import AppPackage.AnimationClass;
 import entites.Produto;
 import java.util.ArrayList;

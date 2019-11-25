@@ -18,7 +18,9 @@ create table pedido(
 id int auto_increment primary key,
 id_usuario int,
 id_produto int,
-created_at datetime null
+created_at datetime null,
+status varchar(45),
+formaforma_pagamento_id int
 ) character set utf8 collate utf8_unicode_ci;
 
 create table empresa(
@@ -27,14 +29,18 @@ nome varchar(100),
 cnpj varchar(11)
 )character set utf8 collate utf8_unicode_ci;
 
+create table formas_pagamento(
+id int auto_increment primary key,
+tipo varchar(100)
+)character set utf8 collate utf8_unicode_ci;
+##################################################################################
+
 						##inserindo as foreings keys
 alter table produto add foreign key (empresa_id) references empresa(id);
 
 alter table pedido add foreign key (id_usuario) references usuario(id);
 alter table pedido add foreign key (id_produto) references produto(id);
-
-
-
+alter table pedido add foreign key (forma_pagamento_id) references formas_pagamento(id);
 
 							##inserino empresas
 insert into empresa (nome,cnpj) values ("pistStop","9999999");
@@ -71,6 +77,11 @@ insert into produto (descricao,preco,igredientes,empresa_id) values ("coxinha de
 insert into produto (descricao,preco,igredientes,empresa_id) values ("pastel",3.99,"massa, recheio",2);
 insert into produto (descricao,preco,igredientes,empresa_id) values ("refrigerante",5.99,"refrigerante varios sabores",2);
 insert into produto (descricao,preco,igredientes,empresa_id) values ("agua",2.99,"agua mineral",2);
+##########################################################################################################################
+
+											##inserindo produtos pontes##
+insert into formas_pagamento (tipo) values("cartao_de_credido");
+insert into formas_pagamento (tipo) values("dinheiro");
 ##########################################################################################################################
 
 select * from usuario;

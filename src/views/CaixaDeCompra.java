@@ -3,6 +3,7 @@ package views;
 import Dao.PedidosDao;
 import Dao.UserDao;
 import entites.Produto;
+import views.estabelecimentos.ProdutosPitstop;
 
 public class CaixaDeCompra extends javax.swing.JDialog {
 
@@ -137,7 +138,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
 
     private void jLabel5AdicionarCarrinhoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5AdicionarCarrinhoMouseClicked
         //adicionando produtos ao array de produtos
-        JanelaPrinci.produtos.add(new Produto(Integer.valueOf(jLabel3IdProduto.getText()),jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()),jLabel2Igredientes.getText(), Integer.valueOf(jLabel3Empresa.getText())));
+        JanelaPrinci.produtos.add(new Produto(Integer.valueOf(jLabel3IdProduto.getText()), jLabel3NomeProduto.getText(), Double.valueOf(jLabel2Preço.getText()), jLabel2Igredientes.getText(), Integer.valueOf(jLabel3Empresa.getText())));
         //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {
             ProdutosPitstop.qtdcarrinho();
@@ -147,7 +148,7 @@ public class CaixaDeCompra extends javax.swing.JDialog {
             ProdutosPontes.qtdcarrinho();
         }
         dispose();
-        
+
         System.out.println(jLabel3IdProduto.getText());
         System.out.println(jLabel3Empresa.getText());
         System.out.println(jLabel3NomeProduto.getText());
@@ -155,8 +156,10 @@ public class CaixaDeCompra extends javax.swing.JDialog {
 
     //confimando pedido
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-      PedidosDao.salvarPedido(UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText()),Integer.valueOf(jLabel3IdProduto.getText()));
-      dispose();
+        JanelaPrinci jp = new JanelaPrinci();
+        CaixaDeFormaDePagamento cdfdp = new CaixaDeFormaDePagamento(jp, rootPaneCheckingEnabled);
+        cdfdp.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     public static void main(String args[]) {
