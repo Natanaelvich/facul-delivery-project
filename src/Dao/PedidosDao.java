@@ -1,5 +1,6 @@
 package Dao;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import views.TabelaDePedidosEStatus;
 import views.TelaDeLogin;
@@ -53,6 +55,33 @@ public class PedidosDao {
                                                     + " where u.id = "+idUSER
                                                     + " order by pe.created_at;");
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidosEStatus.jTable1DadosPedidos.getModel();
+            //mudando cor da coluna de status
+            DefaultTableCellRenderer corAzul = new DefaultTableCellRenderer() {
+            @Override
+            public void setValue(Object value) {
+                setForeground(Color.BLUE);
+                super.setValue(value);
+            }
+        };
+            DefaultTableCellRenderer corLaranja = new DefaultTableCellRenderer() {
+            @Override
+            public void setValue(Object value) {
+                setForeground(new Color(246,102,13));
+                super.setValue(value);
+            }
+        };
+            
+            DefaultTableCellRenderer corVerde = new DefaultTableCellRenderer() {
+            @Override
+            public void setValue(Object value) {
+                setForeground(new Color(9,193,27));
+                super.setValue(value);
+            }
+        };
+            TabelaDePedidosEStatus.jTable1DadosPedidos.getColumnModel().getColumn(3).setCellRenderer(corAzul);
+            TabelaDePedidosEStatus.jTable1DadosPedidos.getColumnModel().getColumn(0).setCellRenderer(corLaranja);
+            TabelaDePedidosEStatus.jTable1DadosPedidos.getColumnModel().getColumn(1).setCellRenderer(corVerde);
+            ////////////////////////////////
             dtm.setNumRows(0);
             while(res.next()){           
                 dtm.addRow(new Object[]{

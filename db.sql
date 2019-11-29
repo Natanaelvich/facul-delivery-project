@@ -101,7 +101,10 @@ on pr.id = pe.id_produto
 join empresa em
 on em.id = pr.empresa_id
 where u.id = 4
-order by pe.created_at;
+order by pe.created;
 
+DELETE FROM pedido 
+WHERE
+status = NULL;
 
 

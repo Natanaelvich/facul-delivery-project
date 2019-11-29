@@ -24,7 +24,7 @@ public class TabelaDePedidosEStatus extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1DadosPedidos.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1DadosPedidos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTable1DadosPedidos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTable1DadosPedidos.setForeground(new java.awt.Color(51, 51, 51));
         jTable1DadosPedidos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -34,9 +34,16 @@ public class TabelaDePedidosEStatus extends javax.swing.JPanel {
                 "Pedido", "Preço", "Data", "Status", "Estabelecimento"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, true
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -44,7 +51,7 @@ public class TabelaDePedidosEStatus extends javax.swing.JPanel {
         });
         jTable1DadosPedidos.setGridColor(new java.awt.Color(102, 102, 102));
         jTable1DadosPedidos.setSelectionBackground(new java.awt.Color(255, 255, 255));
-        jTable1DadosPedidos.setSelectionForeground(new java.awt.Color(51, 51, 51));
+        jTable1DadosPedidos.setSelectionForeground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTable1DadosPedidos);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 760, 560));

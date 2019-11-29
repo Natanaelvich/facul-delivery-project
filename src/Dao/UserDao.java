@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import views.CaixaDeCarrinho;
+import views.TelaDeLogin;
 
 public class UserDao {
 
@@ -101,5 +102,32 @@ public class UserDao {
             Logger.getLogger(CaixaDeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
         }
         return id;
+    }
+    
+    public static Usuario userDados(){
+        int id = getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText());
+        
+        conn = ConnectDao.getConnection();
+
+        String sql = "SELECT * FROM usuario WHERE  id = "+id;
+        ResultSet res;
+        Statement statement;
+        String nome = "",email="",telefone="",senha="";
+            
+        
+        try {
+            statement = conn.createStatement();
+            res = statement.executeQuery(sql);
+            if (res.next()) {
+               nome = res.getString("nome");
+               email = res.getString("email");
+               telefone = res.getString("telefone");
+               senha = res.getString("senha");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       return new Usuario(nome, email, telefone, senha);
     }
 }

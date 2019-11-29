@@ -1,7 +1,5 @@
 package views;
 
-import Dao.PedidosDao;
-import Dao.UserDao;
 import entites.Produto;
 import java.awt.Dimension;
 import javax.swing.JLabel;
