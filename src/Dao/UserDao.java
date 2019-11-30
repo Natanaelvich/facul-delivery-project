@@ -44,6 +44,7 @@ public class UserDao {
             Statement statement = conn.createStatement();
             res = statement.executeQuery(sql);
             resultado = res.next();
+            //fechando conexoes
             ConnectDao.closeConnection(conn);
             ConnectDao.closeConnectionStatement(statement);
             ConnectDao.closeConnectionPrepare(res);
@@ -66,6 +67,7 @@ public class UserDao {
             Statement statement = conn.createStatement();
             res = statement.executeQuery(sql);
             resultado = res.next();
+            //fechando conexoes
             ConnectDao.closeConnection(conn);
             ConnectDao.closeConnectionStatement(statement);
             ConnectDao.closeConnectionPrepare(res);
@@ -94,6 +96,7 @@ public class UserDao {
             } else {
                 System.out.println("nenum resultado");
             }
+            //fechando conexoes
             ConnectDao.closeConnection(conn);
             ConnectDao.closeConnectionStatement(statement);
             ConnectDao.closeConnectionPrepare(res);
@@ -124,6 +127,10 @@ public class UserDao {
                telefone = res.getString("telefone");
                senha = res.getString("senha");
             }
+            //fechando conexoes
+            ConnectDao.closeConnection(conn);
+            ConnectDao.closeConnectionStatement(statement);
+            ConnectDao.closeConnectionPrepare(res);
             
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);

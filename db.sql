@@ -33,6 +33,14 @@ create table formas_pagamento(
 id int auto_increment primary key,
 tipo varchar(100)
 )character set utf8 collate utf8_unicode_ci;
+
+create table endereco_user(
+id int auto_increment primary key,
+bairro varchar(100)
+)character set utf8 collate utf8_unicode_ci;create table formas_pagamento(
+id int auto_increment primary key,
+tipo varchar(100)
+)character set utf8 collate utf8_unicode_ci;
 ##################################################################################
 
 						##inserindo as foreings keys

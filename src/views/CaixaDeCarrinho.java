@@ -1,5 +1,6 @@
 package views;
 
+import Dao.EnderecoDao;
 import entites.Produto;
 import java.awt.Dimension;
 import javax.swing.JLabel;
@@ -261,9 +262,16 @@ public class CaixaDeCarrinho extends javax.swing.JDialog {
     }
     //salvando pedidos
     private void jLabel2ConfirTEXTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2ConfirTEXTMouseClicked
+        //verificar se usuario ja tem endereco cadastrado
+        if(!EnderecoDao.verificarEnderecoUser()){
+          CaixaDeCadastroEndereco cdce = new CaixaDeCadastroEndereco(janelaPrinci, rootPaneCheckingEnabled);
+          cdce.setVisible(true);  
+          dispose();   
+        }else{
         CaixaDeFormaDePagamento cdfdp = new CaixaDeFormaDePagamento(janelaPrinci, rootPaneCheckingEnabled);
         cdfdp.setVisible(true);
-        dispose();
+        dispose();    
+        }
     }//GEN-LAST:event_jLabel2ConfirTEXTMouseClicked
 
     public static void main(String args[]) {

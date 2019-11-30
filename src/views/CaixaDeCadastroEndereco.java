@@ -1,5 +1,7 @@
 package views;
 
+import Dao.EnderecoDao;
+import javax.swing.JOptionPane;
 import views.estabelecimentos.ProdutosPitstop;
 
 public class CaixaDeCadastroEndereco extends javax.swing.JDialog {
@@ -98,6 +100,11 @@ public class CaixaDeCadastroEndereco extends javax.swing.JDialog {
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("Cadastrar");
         jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1AreaCadastro.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 250, 50));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -111,9 +118,9 @@ public class CaixaDeCadastroEndereco extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-   
+
     private void jLabel1FecharMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1FecharMouseClicked
-         //verificando se as janelas de produtos estao ativas
+        //verificando se as janelas de produtos estao ativas
         if (ProdutosPitstop.ativo) {
             ProdutosPitstop.qtdcarrinho();
         }
@@ -123,7 +130,23 @@ public class CaixaDeCadastroEndereco extends javax.swing.JDialog {
         }
         dispose();
     }//GEN-LAST:event_jLabel1FecharMouseClicked
-    
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (!jTextField2Rua.getText().equals("") && !jTextField1Bairro.getText().equals("")
+                && !jTextField4Numero.getText().equals("") && !jTextField3Complemento.getText().equals("")) {
+
+            EnderecoDao.salvarEndereco(jTextField1Bairro.getText(), jTextField2Rua.getText(), jTextField4Numero.getText(), jTextField3Complemento.getText());
+
+            CaixaDeFormaDePagamento cdfdp = new CaixaDeFormaDePagamento(janelaPrinci, rootPaneCheckingEnabled);
+            cdfdp.setVisible(true);
+            dispose();
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos");
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
