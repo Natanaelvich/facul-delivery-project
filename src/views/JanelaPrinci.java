@@ -474,7 +474,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6MenuDeslizar;
     private javax.swing.JLabel jLabel7Iconlogo;
-    private javax.swing.JLabel jLabel7NomeEmpresa;
+    public javax.swing.JLabel jLabel7NomeEmpresa;
     private javax.swing.JLabel jLabel7inicio;
     private javax.swing.JLabel jLabel7pedidos;
     private javax.swing.JLabel jLabel8;
@@ -484,7 +484,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     public static javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider2;
+    public diu.swe.habib.JPanelSlider.JPanelSlider jPanelSlider2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

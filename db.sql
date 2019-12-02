@@ -36,8 +36,15 @@ tipo varchar(100)
 
 create table endereco_user(
 id int auto_increment primary key,
-bairro varchar(100)
-)character set utf8 collate utf8_unicode_ci;create table formas_pagamento(
+bairro varchar(100),
+rua varchar(100),
+numero varchar(4),
+complemento varchar(100),
+id_user int,
+foreign key (id_user) references usuario(id)
+)character set utf8 collate utf8_unicode_ci;
+
+create table formas_pagamento(
 id int auto_increment primary key,
 tipo varchar(100)
 )character set utf8 collate utf8_unicode_ci;
@@ -96,6 +103,7 @@ select * from usuario;
 select * from produto;
 select * from empresa;
 select * from pedido; 
+select * from endereco_user;
 
 select produto.descricao , produto.preco , empresa.nome from produto , empresa where produto.empresa_id = empresa.id;
 
@@ -114,5 +122,4 @@ order by pe.created;
 DELETE FROM pedido 
 WHERE
 status = NULL;
-
 

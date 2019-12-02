@@ -33,6 +33,30 @@ public class UserDao {
         }
 
     }
+    
+     public static void atualizarUser(Usuario user) {
+        conn = ConnectDao.getConnection();
+        String sql = "UPDATE usuario SET  nome = ?,email = ?,telefone = ?,senha = ? WHERE id = ?";
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setString(1, user.getNome());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getTelefone());
+            preparedStatement.setString(4, user.getSenha());
+            preparedStatement.setInt(5, user.getId());
+            preparedStatement.execute();
+
+            ConnectDao.closeConnection(conn);
+            ConnectDao.closeConnectionPrepare(preparedStatement);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+    
+    
+    
 
     //metodo para buscar user
     public static boolean getUser(Usuario user) {
@@ -52,7 +76,6 @@ public class UserDao {
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(resultado);
         return resultado;
 
     }
@@ -92,9 +115,6 @@ public class UserDao {
             res = statement.executeQuery(sql);
             if (res.next()) {
                 id = res.getInt("id");
-                System.out.println(res.getInt("id"));
-            } else {
-                System.out.println("nenum resultado");
             }
             //fechando conexoes
             ConnectDao.closeConnection(conn);
