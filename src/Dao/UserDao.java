@@ -54,14 +54,10 @@ public class UserDao {
 
     }
     
-    
-    
-    
-
     //metodo para buscar user
     public static boolean getUser(Usuario user) {
         conn = ConnectDao.getConnection();
-        String sql = "SELECT * FROM usuario WHERE  email = '" + user.getEmail() + "' AND telefone = '" + user.getTelefone() + "'";
+        String sql = "SELECT * FROM usuario WHERE  nome = '" + user.getNome()+ "' AND senha = '" + user.getSenha()+ "'";
         ResultSet res;
         boolean resultado = false;
         try {
@@ -128,11 +124,10 @@ public class UserDao {
     }
     
     public static Usuario userDados(){
-        int id = getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText());
         
         conn = ConnectDao.getConnection();
 
-        String sql = "SELECT * FROM usuario WHERE  id = "+id;
+        String sql = "SELECT * FROM usuario WHERE  id = "+TelaDeLogin.idUSER;
         ResultSet res;
         Statement statement;
         String nome = "",email="",telefone="",senha="";

@@ -41,7 +41,6 @@ public class PedidosDao {
     public static void  addRowsTable() {
         try {
             Connection conn =  ConnectDao.getConnection();
-            int idUSER = UserDao.getUserID(TelaDeLogin.jTextField1User.getText(), TelaDeLogin.jTextField2Senha.getText());
             Statement statement = conn.createStatement();
             ResultSet res = statement.executeQuery("SELECT pr.descricao, pr.preco,"
                                                     + " pe.created_at, pe.status, "
@@ -52,7 +51,7 @@ public class PedidosDao {
                                                     " on pr.id = pe.id_produto "
                                                     + " join empresa em" +
                                                     " on em.id = pr.empresa_id "
-                                                    + " where u.id = "+idUSER
+                                                    + " where u.id = "+TelaDeLogin.idUSER
                                                     + " order by pe.created_at;");
             DefaultTableModel dtm = (DefaultTableModel)  TabelaDePedidosEStatus.jTable1DadosPedidos.getModel();
             //mudando cor da coluna de status

@@ -1,5 +1,6 @@
 package views;
 
+import Dao.EnderecoDao;
 import Dao.PedidosDao;
 import Dao.UserDao;
 import entites.Produto;
@@ -157,9 +158,16 @@ public class CaixaDeCompra extends javax.swing.JDialog {
     //confimando pedido
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         JanelaPrinci jp = new JanelaPrinci();
+         //verificar se usuario ja tem endereco cadastrado
+        if(!EnderecoDao.verificarEnderecoUser()){
+          CaixaDeCadastroEndereco cdce = new CaixaDeCadastroEndereco(jp, rootPaneCheckingEnabled);
+          cdce.setVisible(true);  
+          dispose();   
+        }else{
         CaixaDeFormaDePagamento cdfdp = new CaixaDeFormaDePagamento(jp, rootPaneCheckingEnabled);
         cdfdp.setVisible(true);
-        dispose();
+        dispose();    
+        }
     }//GEN-LAST:event_jLabel2MouseClicked
 
     public static void main(String args[]) {

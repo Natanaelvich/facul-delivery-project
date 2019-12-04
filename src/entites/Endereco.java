@@ -53,6 +53,12 @@ public class Endereco {
     public void setId_user(int id_user) {
         this.id_user = id_user;
     }
+
+    @Override
+    public String toString() {
+        return "Endereco{" + "bairro=" + bairro + ", rua=" + rua + ", numero=" + numero + ", complemento=" + complemento + ", id_user=" + id_user + '}';
+    }
+    
     
     
     

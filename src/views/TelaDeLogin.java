@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 public class TelaDeLogin extends javax.swing.JFrame {
 
+   public static int idUSER; 
     public TelaDeLogin() {
         initComponents();
     }
@@ -293,6 +294,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
         boolean exist = UserDao.getUserAndSenha(jTextField1User.getText(), jTextField2Senha.getText());
         if (exist) {
             JanelaPrinci janelaPrinci = new JanelaPrinci();
+            idUSER = UserDao.getUserID(jTextField1User.getText(), jTextField2Senha.getText());
+            System.out.println(idUSER+" tela de login");
             this.dispose();
             janelaPrinci.setVisible(true);
         } else {

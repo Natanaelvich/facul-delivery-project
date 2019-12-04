@@ -175,11 +175,13 @@ public class TelaDeUsuario extends javax.swing.JPanel {
         jLabel2NomeUser.setText(user.getNome());
         jLabel1EmailUser.setText(user.getEmail());
         jLabel6Telefone.setText(user.getTelefone());
+        System.out.println(user);
 
         Endereco endereco = EnderecoDao.getEnderecoUSER();
         jLabel2BairroEndereco.setText(endereco.getBairro());
         jLabel6RuaEndereco.setText(endereco.getRua());
         jLabel1NumEndereco.setText(endereco.getNumero());
+        System.out.println(endereco);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

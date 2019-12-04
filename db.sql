@@ -116,8 +116,8 @@ join produto pr
 on pr.id = pe.id_produto
 join empresa em
 on em.id = pr.empresa_id
-where u.id = 4
-order by pe.created;
+where u.id = 13
+order by pe.created_at;
 
 DELETE FROM pedido 
 WHERE

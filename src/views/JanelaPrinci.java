@@ -229,7 +229,7 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel1.setText("Pizzaria PitStop");
+        jLabel1.setText("-----------------");
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 720, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -244,17 +244,17 @@ public class JanelaPrinci extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Pizzaria PitStop");
+        jLabel5.setText("-----------------");
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel22.setText("Pizzaria PitStop");
+        jLabel22.setText("-----------------");
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel23.setText("Pizzaria PitStop");
+        jLabel23.setText("-----------------");
         jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, -1, -1));
 
         jLabel25_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/silhueta-de-forma-circular.png"))); // NOI18N
