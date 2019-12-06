@@ -1,10 +1,7 @@
-package views.estabelecimentos;
+package views;
 
-import views.CaixaDeCarrinho;
-import views.CaixaDeCompra;
 import java.awt.Color;
 import javax.swing.JLabel;
-import views.JanelaPrinci;
 
 public class ProdutosPitstop extends javax.swing.JPanel {
 

@@ -2,6 +2,10 @@ package views;
 
 import Dao.EnderecoDao;
 import entites.Endereco;
+import java.text.ParseException;
+import javax.swing.JFormattedTextField;
+import javax.swing.JOptionPane;
+import javax.swing.text.MaskFormatter;
 
 public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
 
@@ -11,6 +15,7 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         preencherDadosUser();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -27,13 +32,13 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
         jLabel11 = new javax.swing.JLabel();
         jTextField1EnderecoBairroEdit = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        jTextField1EnderecoNumerEdit = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jTextField1EnderecoComplementoEdit = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel1Fechar = new javax.swing.JLabel();
         jTextField1EnderecoRuaEdit = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
+        jTextField1EnderecoNumerEdit = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(698, 408));
@@ -97,12 +102,6 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1UserTela.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 190, -1));
 
-        jTextField1EnderecoNumerEdit.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1EnderecoNumerEdit.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1EnderecoNumerEdit.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField1EnderecoNumerEdit.setBorder(null);
-        jPanel1UserTela.add(jTextField1EnderecoNumerEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 190, 30));
-
         jSeparator4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1UserTela.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 190, -1));
 
@@ -134,6 +133,15 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
         jSeparator7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1UserTela.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 190, -1));
 
+        jTextField1EnderecoNumerEdit.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField1EnderecoNumerEdit.setBorder(null);
+        try {
+            jTextField1EnderecoNumerEdit.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel1UserTela.add(jTextField1EnderecoNumerEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 190, 30));
+
         getContentPane().add(jPanel1UserTela, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 698, 410));
 
         pack();
@@ -154,6 +162,21 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jLabel10MouseClicked
 
+    private void maskLetter(JFormattedTextField jtf) {
+		MaskFormatter formatoDois;
+		try {
+			formatoDois = new MaskFormatter("*");
+			formatoDois.setValidCharacters("1234567890");
+			formatoDois.install(jtf);
+		} catch (ParseException e) {
+			JOptionPane.showMessageDialog(
+					null,
+					this,
+					"Não foi possivel inserir mask nos campos letras: "
+							+ e.getMessage(), 0);
+		}
+	}
+    
     private void preencherDadosUser(){
         Endereco endereco = EnderecoDao.getEnderecoUSER();
         jTextField1EnderecoBairroEdit.setText(endereco.getBairro());
@@ -200,7 +223,7 @@ public class CaixaDeEdicaoDadosEndereco extends javax.swing.JDialog {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTextField jTextField1EnderecoBairroEdit;
     private javax.swing.JTextField jTextField1EnderecoComplementoEdit;
-    private javax.swing.JTextField jTextField1EnderecoNumerEdit;
+    private javax.swing.JFormattedTextField jTextField1EnderecoNumerEdit;
     private javax.swing.JTextField jTextField1EnderecoRuaEdit;
     // End of variables declaration//GEN-END:variables
 }

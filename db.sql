@@ -6,6 +6,15 @@ telefone varchar(11),
 senha varchar(100)
 ) character set utf8 collate utf8_unicode_ci;
 
+#Crinado table usuario
+create table admin(
+id int auto_increment primary key,
+nome varchar(100),
+senha varchar(100),
+empresa_id int,
+foreign key(empresa_id) references empresa(id)
+)character set utf8 collate utf8_unicode_ci;
+
 create table produto(
 id int auto_increment primary key,
 descricao varchar(100),
@@ -63,6 +72,8 @@ insert into empresa (nome,cnpj) values ("pontes","8888888");
 insert into empresa (nome,cnpj) values ("soniaSalgados","7777777");
 insert into empresa (nome,cnpj) values ("pastelariaDoJapones","6666666");
 #############################################################################
+										##inserindo admin pitstop##
+insert into admin (nome,senha,empresa_id) values ('marcos','12345',1);
 
                                          ##inserindo produtos pitstop##
 insert into produto (descricao,preco,igredientes,empresa_id) values ("mexicana",24.99,"frango,calabresa,pimenta",1);
@@ -79,7 +90,8 @@ insert into produto (descricao,preco,igredientes,empresa_id) values ("refrigeran
 insert into produto (descricao,preco,igredientes,empresa_id) values ("suco",3.99,"agua, açucar,polpa",1);
 insert into produto (descricao,preco,igredientes,empresa_id) values ("agua",2.99,"agua mineral",1);
 ##########################################################################################################################
-
+										##inserindo admin pitstop##
+insert into admin (nome,senha,empresa_id) values ('natanael','natangostoso',2);
 											##inserindo produtos pontes##
 insert into produto (descricao,preco,igredientes,empresa_id) values ("mexicana",24.99,"frango,calabresa,pimenta",2);
 insert into produto (descricao,preco,igredientes,empresa_id) values ("portuguesa",34.99,"frango,calabresa,pimenta",2);
@@ -104,6 +116,7 @@ select * from produto;
 select * from empresa;
 select * from pedido; 
 select * from endereco_user;
+select * from admin;
 
 select produto.descricao , produto.preco , empresa.nome from produto , empresa where produto.empresa_id = empresa.id;
 
@@ -119,7 +132,21 @@ on em.id = pr.empresa_id
 where u.id = 13
 order by pe.created_at;
 
-DELETE FROM pedido 
-WHERE
-status = NULL;
+##query pedidos pendentes
 
+SELECT pe.id,u.id,u.nome,eu.rua,eu.bairro,eu.numero,u.telefone,pr.descricao,pr.preco,pr.id , pe.status from pedido pe
+join usuario u
+on u.id = pe.id_usuario
+join endereco_user eu
+on eu.id_user = u.id
+join produto pr
+on pr.id = pe.id_produto
+join empresa em
+on em.id = pr.empresa_id
+where em.id = 1
+and pe.status = 'Pendente'
+order by pe.created_at;
+
+delete from usuario where telefone = null;
+
+delete from pedido where id_usuario = 4;
